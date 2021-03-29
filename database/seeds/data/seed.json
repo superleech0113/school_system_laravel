@@ -1,0 +1,3930 @@
+{
+    "activities": {
+        "eloquent": "\\App\\Activity",
+        "records": [
+            {
+                "id": 1,
+                "name": "reservation-cancelled-via-email"
+            },
+            {
+                "id": 2,
+                "name": "user-loggedin"
+            },
+            {
+                "id": 3,
+                "name": "contact-created"
+            },
+            {
+                "id": 4,
+                "name": "reservation-made"
+            },
+            {
+                "id": 5,
+                "name": "reservation-cancelled"
+            },
+            {
+                "id": 6,
+                "name": "payment-created"
+            },
+            {
+                "id": 7,
+                "name": "todo-created"
+            },
+            {
+                "id": 8,
+                "name": "todo-completed"
+            },
+            {
+                "id": 9,
+                "name": "class-scheduled"
+            },
+            {
+                "id": 10,
+                "name": "class-cancelled"
+            },
+            {
+                "id": 11,
+                "name": "reservation-deleted"
+            },
+            {
+                "id": 12,
+                "name": "payment-updated"
+            },
+            {
+                "id": 13,
+                "name": "payment-deleted"
+            }
+        ]
+    },
+    "books": {
+        "eloquent": "\\App\\Books",
+        "records": [
+            {
+                "id": 1,
+                "name": "Mystery in London",
+                "quantity": 1,
+                "author_name": "Helen Brooke",
+                "level": "A1",
+                "thumbnail": "cb95f662f5f20d1a4eefe4f6986975ea.png",
+                "date": "2000-01-01",
+                "barcode": "978-0194234283"
+            }
+        ]
+    },
+    "cancellation_policies": {
+        "eloquent": "\\App\\CancellationPolicies",
+        "records": [
+            {
+                "id": 1,
+                "cancel_type_id": 1,
+                "payment_plan_id": 0,
+                "points": 0,
+                "salary": 500
+            },
+            {
+                "id": 2,
+                "cancel_type_id": 2,
+                "payment_plan_id": 0,
+                "points": 2.5,
+                "salary": 700
+            },
+            {
+                "id": 3,
+                "cancel_type_id": 3,
+                "payment_plan_id": 0,
+                "points": 5,
+                "salary": 1000
+            },
+            {
+                "id": 5,
+                "cancel_type_id": 1,
+                "payment_plan_id": 19,
+                "points": 0,
+                "salary": 500
+            },
+            {
+                "id": 6,
+                "cancel_type_id": 2,
+                "payment_plan_id": 19,
+                "points": 7,
+                "salary": 700
+            },
+            {
+                "id": 7,
+                "cancel_type_id": 3,
+                "payment_plan_id": 19,
+                "points": 15,
+                "salary": 1000
+            },
+            {
+                "id": 8,
+                "cancel_type_id": 1,
+                "payment_plan_id": 20,
+                "points": 0,
+                "salary": 0
+            },
+            {
+                "id": 9,
+                "cancel_type_id": 2,
+                "payment_plan_id": 20,
+                "points": 15,
+                "salary": 500
+            },
+            {
+                "id": 10,
+                "cancel_type_id": 3,
+                "payment_plan_id": 20,
+                "points": 30,
+                "salary": 1000
+            }
+        ]
+    },
+    "cancel_types": {
+        "eloquent": "\\App\\CancelType",
+        "records": [
+            {
+                "id": 1,
+                "name": "Cancellation 24 hours before ",
+                "alias": "cancel"
+            },
+            {
+                "id": 2,
+                "name": "Cancellation 1 hour before",
+                "alias": "partial-penalty-cancel"
+            },
+            {
+                "id": 3,
+                "name": "Cancellation without previous warning",
+                "alias": "full-penalty-cancel"
+            }
+        ]
+    },
+    "categories": {
+        "eloquent": "\\App\\Category",
+        "records": [
+            {
+                "id": 1,
+                "name": "class"
+            },
+            {
+                "id": 2,
+                "name": "contact"
+            },
+            {
+                "id": 3,
+                "name": "payment"
+            },
+            {
+                "id": 4,
+                "name": "schedule"
+            },
+            {
+                "id": 5,
+                "name": "student"
+            },
+            {
+                "id": 6,
+                "name": "teacher"
+            },
+            {
+                "id": 7,
+                "name": "to-do"
+            },
+            {
+                "id": 8,
+                "name": "settings"
+            },
+            {
+                "id": 9,
+                "name": "management"
+            },
+            {
+                "id": 10,
+                "name": "availability"
+            },
+            {
+                "id": 11,
+                "name": "attendance"
+            },
+            {
+                "id": 12,
+                "name": "assessment"
+            },
+            {
+                "id": 13,
+                "name": "logs"
+            },
+            {
+                "id": 14,
+                "name": "others"
+            },
+            {
+                "id": 15,
+                "name": "course"
+            }
+        ]
+    },
+    "classes": {
+        "eloquent": "\\App\\Classes",
+        "records": [
+            {
+                "id": 1,
+                "title": "Exciting Group Lesson",
+                "payment_plan_id": null,
+                "status": 0,
+                "size": 5,
+                "class_type": 0,
+                "description": null,
+                "cost": null,
+                "level": "A0",
+                "category_id": 1,
+                "length": "01:00",
+                "default_course_id": null
+            },
+            {
+                "id": 2,
+                "title": "Interesting Group Lesson",
+                "payment_plan_id": null,
+                "status": 0,
+                "size": 5,
+                "class_type": 0,
+                "description": null,
+                "cost": null,
+                "level": "A1",
+                "category_id": 1,
+                "length": "01:00",
+                "default_course_id": null
+            },
+            {
+                "id": 3,
+                "title": "Superb Group Lesson",
+                "payment_plan_id": null,
+                "status": 0,
+                "size": 5,
+                "class_type": 0,
+                "description": null,
+                "cost": null,
+                "level": "A2",
+                "category_id": 1,
+                "length": "01:00",
+                "default_course_id": null
+            },
+            {
+                "id": 4,
+                "title": "Short Private Lesson",
+                "payment_plan_id": null,
+                "status": 0,
+                "size": 1,
+                "class_type": 0,
+                "description": null,
+                "cost": null,
+                "level": "A0",
+                "category_id": 2,
+                "length": "00:30",
+                "default_course_id": null
+            },
+            {
+                "id": 5,
+                "title": "Long Private Lesson",
+                "payment_plan_id": null,
+                "status": 0,
+                "size": 1,
+                "class_type": 0,
+                "description": null,
+                "cost": null,
+                "level": "A0",
+                "category_id": 2,
+                "length": "01:00",
+                "default_course_id": null
+            },
+            {
+                "id": 6,
+                "title": "Level Check",
+                "payment_plan_id": null,
+                "status": 0,
+                "size": 1,
+                "class_type": 0,
+                "description": null,
+                "cost": null,
+                "level": "A0",
+                "category_id": 3,
+                "length": "00:30",
+                "default_course_id": null
+            },
+            {
+                "id": 7,
+                "title": "Counseling",
+                "payment_plan_id": null,
+                "status": 0,
+                "size": 1,
+                "class_type": 0,
+                "description": null,
+                "cost": null,
+                "level": "A0",
+                "category_id": 3,
+                "length": "00:30",
+                "default_course_id": null
+            }
+        ]
+    },
+    "class_categories": {
+        "eloquent": "\\App\\ClassCategories",
+        "records": [
+            {
+                "id": 1,
+                "name": "Group Lesson",
+                "visible_user_roles": "[\"Student\",\"Teacher\",\"Super Admin\",\"Admin\"]"
+            },
+            {
+                "id": 2,
+                "name": "Private Lesson",
+                "visible_user_roles": "[\"Teacher\",\"Super Admin\",\"Admin\",\"Private Student\"]"
+            },
+            {
+                "id": 3,
+                "name": "Prospective Student Reservations",
+                "visible_user_roles": "[\"Teacher\",\"Super Admin\",\"Admin\",\"Prospective Student\"]"
+            }
+        ]
+    },
+    "contacts": {
+        "eloquent": "\\App\\Contacts",
+        "records": [
+            {
+                "id": 1,
+                "customer_id": 2,
+                "message": "We received a telephone call from Jiro's parents today. He's sick and will be absent.",
+                "status": 0,
+                "type": "denwa",
+                "user_id": 1
+            }
+        ]
+    },
+    "courses": {
+        "eloquent": "\\App\\Courses",
+        "records": [
+            {
+                "id": 1,
+                "title": "Sample Course",
+                "objectives": "Help you to learn about adding courses.",
+                "description": "This is a simple sample course to show what you can add to courses.",
+                "thumbnail": null
+            }
+        ]
+    },
+    "email_templates": {
+        "eloquent": "\\App\\EmailTemplates",
+        "records": [
+            {
+                "id": 1,
+                "name": "register_class_notification_repeat",
+                "subject_en": "uTeach Cloud: You are registered to the class {class_name}!",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email.\r\n<br><Br>\r\nYou are registered to the class {class_name}.<br>\r\n{class_name} will be held on {date} at {time}.\r\n<br><br>\r\nHave a great day!\r\n<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud: \u3042\u306a\u305f\u306f\u30af\u30e9\u30b9\u306b\u767b\u9332\u3055\u308c\u3066\u3044\u307e\u3059 {class_name}!",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n<br><br>\r\n\u4e0b\u8a18\u306e\u30af\u30e9\u30b9\u4e88\u7d04\u3092\u53d7\u4ed8\u3057\u307e\u3057\u305f\u3002\r\n<br><br>\r\n\u30af\u30e9\u30b9\u540d\uff1a {class_name} <br>\r\n\u65e5\u7a0b\uff1a{date} \u3000{time}\r\n\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 2,
+                "name": "cancel_reservation_notify_waitlist",
+                "subject_en": "uTeach Cloud - A class spot has opened up!",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email.\r\n<br><Br>\r\n\r\nA spot you were waiting for has opened up in {class_name} on {date}!\r\nIf you'd like to make a reservation, please click below:\r\n{action_btns}\r\n\r\n<br><br>\r\nHave a great day!\r\n<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a{date}\u306e\u30af\u30e9\u30b9\u306e\u5e2d\u304c\u7a7a\u304d\u307e\u3057\u305f",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u30ad\u30e3\u30f3\u30bb\u30eb\u5f85\u3061\u4e88\u7d04\u304c\u5165\u3063\u3066\u3044\u305f{date}\u306e{class_name}\u30af\u30e9\u30b9\u306b\u7a7a\u304d\u304c\u51fa\u307e\u3057\u305f\u3002\r\n\u30af\u30e9\u30b9\u306e\u53c2\u52a0\u304c\u53ef\u80fd\u3067\u3042\u308c\u3070\u3001\u4e0b\u8a18\u306e\u30dc\u30bf\u30f3\u304b\u3089\u4e88\u7d04\u78ba\u5b9a\u3092\u3057\u3066\u304f\u3060\u3055\u3044\u3002\r\n<br><br>\r\n{action_btns}\r\n<br><Br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 3,
+                "name": "new_user_notification",
+                "subject_en": "Welcome to uTeach Cloud",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email.\r\n<br><br>\r\nThanks for signing up at uTeach Cloud. We have completed your registration. \r\n<br><br>\r\nThis email address will be used to deliver notifications related to your class.\r\n<br><br>\r\nHave a great day!\r\n<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u767b\u9332\u5b8c\u4e86\u3057\u307e\u3057\u305f",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u3054\u767b\u9332\u3042\u308a\u304c\u3068\u3046\u3054\u3056\u3044\u307e\u3059\u3002\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\u306e\u767b\u9332\u304c\u5b8c\u4e86\u3057\u307e\u3057\u305f\u3002\r\n<br><br>\r\n\u30ec\u30c3\u30b9\u30f3\u4e88\u7d04\u30fb\u30ad\u30e3\u30f3\u30bb\u30eb\u7533\u8acb\u3067\u30a2\u30d7\u30ea\u3092\u5229\u7528\u3059\u308b\u3068\u30e1\u30fc\u30eb\u901a\u77e5\u304c\u5c4a\u304d\u307e\u3059\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 4,
+                "name": "test_notification",
+                "subject_en": "uTeach Cloud: A test is waiting for you!",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nYou've already finished lesson {lesson}, unit {unit}, course {course} on {date}.\r\n<br><br>\r\nAs part of your course, you will need to take test {test} using {test_url},\r\n<br><br>\r\nHave a great day!<br>\r\nuTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u30c6\u30b9\u30c8\u3092\u53d7\u3051\u3066\u304f\u3060\u3055\u3044\uff01",
+                "content_ja": "{student_name}\u69d8\r\n<br><br>\r\n{date}\u306e\u30ec\u30c3\u30b9\u30f3{lesson}\u3001\u30e6\u30cb\u30c3\u30c8{unit}\u3001\u30b3\u30fc\u30b9{course}\u306f\u3059\u3067\u306b\u7d42\u4e86\u3057\u3066\u3044\u307e\u3059\u3002\r\n<br><br>\r\n\u30b3\u30fc\u30b9\u306e\u4e00\u90e8\u3068\u3057\u3066\u3001{test_url}\u306e\u30c6\u30b9\u30c8{test}\u3092\u53d7\u3051\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 5,
+                "name": "automatic_assessment_notification",
+                "subject_en": "uTeach Cloud - Please take an assessment",
+                "content_en": "Dear {user_name},\r\n<br><br>\r\nYou've finished lesson {lesson}, unit {unit}, course {course} on {date}.\r\n<br><br>\r\nAs part of your course, you will need to take an assessment {assessment} on {assessment_url},\r\n<br><br>\r\nHave a great day!<br>\r\nuTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u3092\u8a18\u5165\u3057\u3066\u304f\u3060\u3055\u3044",
+                "content_ja": "{user_name}\u69d8\r\n<br><br>\r\n{date}\u306e\u30ec\u30c3\u30b9\u30f3{lesson}\u3001\u30e6\u30cb\u30c3\u30c8{unit}\u3001\u30b3\u30fc\u30b9{course}\u306f\u3059\u3067\u306b\u7d42\u4e86\u3057\u3066\u3044\u307e\u3059\u3002\r\n<br><br>\r\n\u30b3\u30fc\u30b9\u306e\u4e00\u90e8\u3068\u3057\u3066\u3001{assessment_url}\u306e\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8{assessment}\u3092\u53d7\u3051\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 6,
+                "name": "manual_assessment_notification",
+                "subject_en": "uTeach Cloud - Please take an assessment",
+                "content_en": "Dear {user_name},\r\n<br><br>\r\nYou've finished lesson {lesson}, unit {unit}, course {course} on {date}.\r\n<br><br>\r\nAs part of your course, you will need to take an assessment {assessment} on {assessment_url},\r\n<br><br>\r\nHave a great day!<br>\r\nuTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u3092\u8a18\u5165\u3057\u3066\u304f\u3060\u3055\u3044",
+                "content_ja": "{user_name}\u69d8\r\n<br><br>\r\n{date}\u306e\u30ec\u30c3\u30b9\u30f3{lesson}\u3001\u30e6\u30cb\u30c3\u30c8{unit}\u3001\u30b3\u30fc\u30b9{course}\u306f\u3059\u3067\u306b\u7d42\u4e86\u3057\u3066\u3044\u307e\u3059\u3002\r\n<br><br>\r\n\u30b3\u30fc\u30b9\u306e\u4e00\u90e8\u3068\u3057\u3066\u3001{assessment_url}\u306e\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8{assessment}\u3092\u53d7\u3051\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 7,
+                "name": "paper_test_notification",
+                "subject_en": "uTeach Cloud - Please Record Paper Tests",
+                "content_en": "Hi {teacher_name},\r\n<br><br>\r\nYou've already finished lesson {lesson}, unit {unit}, course {course} on {date}.\r\n<br><br>\r\nDon't forget to add paper tests {test} on {test_url},\r\n<br><br>\r\nHave a great day!<br>\r\nuTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u7d19\u30c6\u30b9\u30c8\u3092\u8a18\u9332\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+                "content_ja": "{teacher_name}\u69d8\r\n<br><br>\r\n{date}\u306e\u30ec\u30c3\u30b9\u30f3{lesson}\u3001\u30e6\u30cb\u30c3\u30c8{unit}\u3001\u30b3\u30fc\u30b9{course}\u306f\u3059\u3067\u306b\u7d42\u4e86\u3057\u3066\u3044\u307e\u3059\u3002\r\n<br><br>\r\n\u7d9a\u884c\u3059\u308b\u524d\u306b\u3001{test_url}\u306e\u30c6\u30b9\u30c8{test}\u3092\u8ffd\u52a0\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 8,
+                "name": "checkin_notification",
+                "subject_en": "uTeach Cloud - Checked in Successfully",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email. \r\n<br><br>\r\nYou have successfully checked in at {date_time}.\r\n<br><br>\r\nHave a great day!<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u6559\u5ba4\u306b\u5230\u7740\u306e\u304a\u77e5\u3089\u305b",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n<br><br>\r\n{student_name}\u69d8\u304c {date_time}\u306b\u7121\u4e8b\u306b\u6559\u5ba4\u306b\u5230\u7740\u3057\u307e\u3057\u305f\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 9,
+                "name": "checkout_notification",
+                "subject_en": "uTeach Cloud - Checked out Successfully",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email. \r\n<br><br>\r\nYou have successfully checked out at {date_time}.\r\n<br><br>\r\nHave a great day!<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u6559\u5ba4\u304b\u3089\u51fa\u307e\u3057\u305f",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n<br><br>\r\n{student_name}\u69d8\u304c {date_time}\u306b\u7121\u4e8b\u306b\u6559\u5ba4\u304b\u3089\u51fa\u307e\u3057\u305f\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 10,
+                "name": "daily_reservation_reminder",
+                "subject_en": "uTeach Cloud Reservation Reminder",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email. \r\n<br><br>\r\nThank you for being an important member of our school. This is a reminder email about your reservation today.\r\n\r\n<br><br>\r\n\r\nDate:{date}\r\n{reserved_classes_section}\r\n{reserved_events_section}\r\n<br>\r\nPlease follow the link below if you'd like to make any additional reservations.\r\n<br>\r\n{signin_btn}\r\n<br>\r\nHave a great day!<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u672c\u65e5\u30ec\u30c3\u30b9\u30f3\u65e5\u3067\u3059\uff01\u304a\u5f85\u3061\u3057\u3066\u307e\u3059\u3002",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u306e\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n<br><br>\r\n\u4eca\u65e5\u306e\u30d9\u30f3\u3061\u3083\u3093\u82f1\u4f1a\u8a71\u306e\u30ec\u30c3\u30b9\u30f3\u6642\u9593\u306e\u78ba\u8a8d\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u65e5\u4ed8\uff1a{date}<Br>\r\n{reserved_classes_section}<br>\r\n{reserved_events_section}\r\n<br>\r\n\u8ffd\u52a0\u4e88\u7d04\u3059\u308b\u5834\u5408\u306f\u4e0b\u8a18\u306e\u30dc\u30bf\u30f3\u304b\u3089\u30ed\u30b0\u30a4\u30f3\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br><br>\r\n{signin_btn}\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 11,
+                "name": "assessment_result_available_notification",
+                "subject_en": "uTeach Cloud - Assessment Result is Available",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email. \r\n<br><br>\r\nYour assessment result for class {class_name} is available.<br>\r\nYou may view it here: {view_assessment_url} <br>\r\n<br>\r\nHave a great day!<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u7d50\u679c\u304c\u898b\u308c\u308b\u3088\u3046\u306b\u306a\u308a\u307e\u3057\u305f",
+                "content_ja": "{student_name}\u69d8\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u306e\u30e1\u30fc\u30eb\u3067\u3059\u3002 <br><br>\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002<Br><Br>\r\n\u3053\u306e\u30ea\u30f3\u30af{view_assessment_url}\u3092\u30af\u30ea\u30c3\u30af\u3057\u3066\u8a55\u4fa1\u306e\u8a73\u7d30\u3092\u8868\u793a\u3067\u304d\u307e\u3059\u3002<br>\r\n<br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 12,
+                "name": "password_reset_link_notification",
+                "subject_en": "uTeach Cloud - Reset Your Password",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email. \r\n<br><br>\r\nPlease follow this link to reset your password: {reset_password_link}\r\n<br>\r\nHave a great day!<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u30ea\u30bb\u30c3\u30c8\u3059\u308b",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u81ea\u52d5\u9001\u4fe1\u306e\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><br>\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n<br><br>\r\n\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u30ea\u30bb\u30c3\u30c8\u3059\u308b\u305f\u3081\u306e\u30ea\u30f3\u30af\u306f\u3053\u3061\u3089\uff1a {reset_password_link}\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 13,
+                "name": "verify_email_notification",
+                "subject_en": "BCE - Verify your email",
+                "content_en": "Dear {username},\r\n<br><br>\r\nPlease click the link below to verify your email address. <br>\r\n{verify_email_link}<br>\r\n<br>\r\nRegards,<br>\r\nuTeach Cloud",
+                "subject_ja": "\u30d9\u30f3\u3061\u3083\u3093\u82f1\u4f1a\u8a71\uff1a\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\u3092\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044",
+                "content_ja": "{username}\u69d8,\r\n<br><br>\r\n\u4e0b\u8a18\u306e\u30ea\u30f3\u30af\u3092\u30af\u30ea\u30c3\u30af\u3057\u3066\u3001\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\u3092\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044. <br>\r\n{verify_email_link}<br>\r\n<br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 14,
+                "name": "cancel_class_notification",
+                "subject_en": "uTeach Cloud - Your reservation for {class_name} is cancelled",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email.\r\n<br><Br>\r\nYour reservation for class {class_name} on following date(s) at {time} has been cancelled. <br>\r\nCancelled on date(s): {date}\r\n<br><br>\r\nHave a great day!\r\n<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a{class_name}\u306e\u4e88\u7d04\u306f\u30ad\u30e3\u30f3\u30bb\u30eb\u3055\u308c\u307e\u3057\u305f",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u3053\u308c\u306f\u81ea\u52d5\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><Br>\r\n{class_name}\u306e\u4e88\u7d04\u3092\u30ad\u30e3\u30f3\u30bb\u30eb\u3057\u307e\u3057\u305f\u3002<br>\r\n\u30ad\u30e3\u30f3\u30bb\u30eb\u3057\u305f\u65e5\u4ed8\uff1a{date}\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 15,
+                "name": "waitlist_class_notification",
+                "subject_en": "uTeach Cloud - Waitlist for {class_name} on {date} at {time}",
+                "content_en": "Dear {student_name},\r\n<br><br>\r\nThis is an automated email.\r\n<br><Br>\r\nYou have been added to waitlist of the class {class_name}.<br>\r\n{class_name} will be held on {date} at {time}.\r\n<br><br>\r\nYou will receive an email notification if reservations for this class open up again.\r\n<br><br>\r\nHave a great day!\r\n<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a{class_name}\u306e\u30ad\u30e3\u30f3\u30bb\u30eb\u5f85\u3061\u30ea\u30b9\u30c8\u306b\u8ffd\u52a0\u3055\u308c\u307e\u3057\u305f\uff01",
+                "content_ja": "{student_name}\u69d8,\r\n<br><br>\r\n\u3053\u308c\u306f\u81ea\u52d5\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><Br>\r\n\u30af\u30e9\u30b9{class_name}\u306e\u30ad\u30e3\u30f3\u30bb\u30eb\u5f85\u3061\u3067\u3059\u3002<br>\r\n{class_name}\u306f{date}\u306e{time}\u306b\u958b\u8b1b\u3055\u308c\u307e\u3059\u3002\r\n<br><br>\r\n\u3053\u306e\u30af\u30e9\u30b9\u306b\u7a7a\u304d\u304c\u3067\u304d\u305f\u3089\u3001\u30e1\u30fc\u30eb\u901a\u77e5\u304c\u5c4a\u304d\u307e\u3059\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 16,
+                "name": "register_class_notification_to_teacher",
+                "subject_en": "uTeach Cloud - Class Registration Notification",
+                "content_en": "Dear {teacher_name},\r\n<br><br>\r\nThis is an automated email.\r\n<br><Br>\r\n{student_name} has joined your class {class_name} held on {date} at {time}.\r\n<br><br>\r\nHave a great day!\r\n<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a\u30af\u30e9\u30b9\u4e88\u7d04\u53d7\u4ed8\u306e\u304a\u77e5\u3089\u305b",
+                "content_ja": "{teacher_name}\u69d8,\r\n<br><br>\r\n\u3053\u308c\u306f\u81ea\u52d5\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><Br>\r\n{student_name}\u304c{date}\u306e{time}\u306b\u958b\u50ac\u3055\u308c\u305f\u30af\u30e9\u30b9{class_name}\u306b\u53c2\u52a0\u3057\u307e\u3057\u305f\u3002\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br>\r\nuTeach Cloud",
+                "enable": 1
+            },
+            {
+                "id": 17,
+                "name": "zoom_meeting_reminder_for_class",
+                "subject_en": "uTeach Cloud - {class_name} will be held on Zoom!",
+                "content_en": "Dear {username},\r\n<br><br>\r\nThis is an automated email.\r\n<br><Br>\r\nYou can join the class with Zoom on {date} at {time} for class {class_name} by clicking the link below. <br>\r\n<a href=\"{zoom_meeting_url}\" target=\"_blank\">{zoom_meeting_url}<\/a>\r\n<br><br>\r\nMeeting ID: {zoom_meeting_id} <br>\r\nPassword: {zoom_meeting_password}\r\n<br><br>\r\nHave a great day!\r\n<br>\r\n- uTeach Cloud",
+                "subject_ja": "uTeach Cloud\uff1a{class_name}\u306e\u30aa\u30f3\u30e9\u30a4\u30f3\u30ec\u30c3\u30b9\u30f3\u60c5\u5831",
+                "content_ja": "{username}\u69d8,\r\n<br><br>\r\n\u3053\u308c\u306f\u81ea\u52d5\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n<br><Br>\r\n\u4ee5\u4e0b\u306e\u30ea\u30f3\u30af\u3092\u30af\u30ea\u30c3\u30af\u3057\u3066\u3001{date}\u306e{time}\u306b\u30af\u30e9\u30b9{class_name}\u306e\u30ba\u30fc\u30e0\u4f1a\u8b70\u306b\u53c2\u52a0\u3057\u3066\u304f\u3060\u3055\u3044\u3002<br>\r\n<a href=\"{zoom_meeting_url}\" target=\"_blank\">{zoom_meeting_url}<\/a>\r\n<br><br>\r\n\u4f1a\u8b70ID: {zoom_meeting_id} <br>\r\n\u30d1\u30b9\u30ef\u30fc\u30c9: {zoom_meeting_password}\r\n<br><br>\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\n<br>\r\nuTeach Cloud",
+                "enable": 1
+            }
+        ]
+    },
+    "footer_links": {
+        "eloquent": "\\App\\FooterLinks",
+        "records": [
+            {
+                "id": 1,
+                "label_en": "uTeach Home",
+                "label_ja": "uTeach \u30db\u30fc\u30e0",
+                "link": "uteach.jp",
+                "display_order": 1
+            }
+        ]
+    },
+    "lessons": {
+        "eloquent": "\\App\\Lessons",
+        "records": [
+            {
+                "id": 1,
+                "course_id": 1,
+                "unit_id": 1,
+                "title": "Powerful Tools",
+                "description": "Courses help you to organize information for admin, teachers, and students. They can help everyone stay on the same page, cut down on prep time, and make it easy to share resources with students.",
+                "objectives": null,
+                "full_text": null,
+                "thumbnail": null,
+                "position": null,
+                "student_lesson_prep": null,
+                "vocab_list": "words\r\ngo\r\nhere\r\nfor\r\nquick\r\nreference",
+                "extra_materials_text": null,
+                "teachers_notes": null,
+                "teachers_prep": null
+            }
+        ]
+    },
+    "lesson_exercises": {
+        "eloquent": "\\App\\LessonExercise",
+        "records": [
+            {
+                "id": 1,
+                "lesson_id": 1,
+                "title": "You can add multiple activities to a lesson"
+            },
+            {
+                "id": 2,
+                "lesson_id": 1,
+                "title": "Then check them off independently"
+            },
+            {
+                "id": 3,
+                "lesson_id": 1,
+                "title": "It helps you track progress"
+            }
+        ]
+    },
+    "lesson_files": {
+        "eloquent": "\\App\\LessonFile",
+        "records": [
+            {
+                "id": 1,
+                "lesson_id": 1,
+                "section": 1,
+                "file_path": "lesson_files\/11593832689__OD3_ER01.pdf",
+                "file_name": "OD3_ER01.pdf"
+            },
+            {
+                "id": 2,
+                "lesson_id": 1,
+                "section": 2,
+                "file_path": "lesson_files\/11593832707__Unit 1 - Get Ready.pdf",
+                "file_name": "Unit 1 - Get Ready.pdf"
+            },
+            {
+                "id": 3,
+                "lesson_id": 1,
+                "section": 3,
+                "file_path": "lesson_files\/11593832725__010 Unit 1 Read Amazing animals.mp3",
+                "file_name": "010 Unit 1 Read Amazing animals.mp3"
+            },
+            {
+                "id": 4,
+                "lesson_id": 1,
+                "section": 3,
+                "file_path": "lesson_files\/11593832725__013 Unit 1 Grammar in Use Listen and Sing Along.mp3",
+                "file_name": "013 Unit 1 Grammar in Use Listen and Sing Along.mp3"
+            },
+            {
+                "id": 5,
+                "lesson_id": 1,
+                "section": 3,
+                "file_path": "lesson_files\/11593832725__014 Unit 1 Communicate  words A.mp3",
+                "file_name": "014 Unit 1 Communicate  words A.mp3"
+            },
+            {
+                "id": 6,
+                "lesson_id": 1,
+                "section": 3,
+                "file_path": "lesson_files\/11593832726__014 Unit 1 Communicate Listening C.mp3",
+                "file_name": "014 Unit 1 Communicate Listening C.mp3"
+            },
+            {
+                "id": 7,
+                "lesson_id": 1,
+                "section": 3,
+                "file_path": "lesson_files\/11593832727__015 Unit 1 Communicate Speaking E.mp3",
+                "file_name": "015 Unit 1 Communicate Speaking E.mp3"
+            },
+            {
+                "id": 8,
+                "lesson_id": 1,
+                "section": 3,
+                "file_path": "lesson_files\/11593832727__014 Unit 1 Communicate Listening D.mp3",
+                "file_name": "014 Unit 1 Communicate Listening D.mp3"
+            },
+            {
+                "id": 9,
+                "lesson_id": 1,
+                "section": 5,
+                "file_path": "https:\/\/www.youtube.com\/watch?v=sbHQwJhkO3E",
+                "file_name": "uTeach Terminal Walkthrough"
+            }
+        ]
+    },
+    "lesson_homeworks": {
+        "eloquent": "\\App\\LessonHomework",
+        "records": [
+            {
+                "id": 1,
+                "lesson_id": 1,
+                "title": "Homework activities can also be managed"
+            },
+            {
+                "id": 2,
+                "lesson_id": 1,
+                "title": "It's simple"
+            }
+        ]
+    },
+    "model_has_roles": {
+        "eloquent": null,
+        "records": [
+            {
+                "role_id": 3,
+                "model_type": "App\\User",
+                "model_id": 1
+            },
+            {
+                "role_id": 5,
+                "model_type": "App\\User",
+                "model_id": 2
+            },
+            {
+                "role_id": 4,
+                "model_type": "App\\User",
+                "model_id": 3
+            },
+            {
+                "role_id": 6,
+                "model_type": "App\\User",
+                "model_id": 4
+            },
+            {
+                "role_id": 1,
+                "model_type": "App\\User",
+                "model_id": 5
+            },
+            {
+                "role_id": 1,
+                "model_type": "App\\User",
+                "model_id": 6
+            },
+            {
+                "role_id": 1,
+                "model_type": "App\\User",
+                "model_id": 7
+            },
+            {
+                "role_id": 7,
+                "model_type": "App\\User",
+                "model_id": 8
+            },
+            {
+                "role_id": 2,
+                "model_type": "App\\User",
+                "model_id": 9
+            }
+        ]
+    },
+    "notification_texts": {
+        "eloquent": "\\App\\NotificationText",
+        "records": [
+            {
+                "id": 1,
+                "email_template_id": 2,
+                "type": 1,
+                "key": "reserve",
+                "text_en": "Reserve",
+                "text_ja": "\u4e88\u7d04\u3059\u308b"
+            },
+            {
+                "id": 2,
+                "email_template_id": 2,
+                "type": 1,
+                "key": "cancel-waitlist",
+                "text_en": "Cancel",
+                "text_ja": "\u30ad\u30e3\u30f3\u30bb\u30eb\u3059\u308b"
+            },
+            {
+                "id": 3,
+                "email_template_id": 10,
+                "type": 1,
+                "key": "login",
+                "text_en": "Login",
+                "text_ja": "\u30ed\u30b0\u30a4\u30f3"
+            },
+            {
+                "id": 4,
+                "email_template_id": 10,
+                "type": 1,
+                "key": "cancel-class-reservation",
+                "text_en": "Cancel",
+                "text_ja": "\u30ad\u30e3\u30f3\u30bb\u30eb"
+            },
+            {
+                "id": 5,
+                "email_template_id": 10,
+                "type": 1,
+                "key": "cancel-event-reservation",
+                "text_en": "Cancel",
+                "text_ja": "\u30ad\u30e3\u30f3\u30bb\u30eb"
+            },
+            {
+                "id": 6,
+                "email_template_id": 1,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nThis is an automated email.\r\n\r\nYou are registered to the class {class_name}.\r\n{class_name} will be held on {date} at {time}.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8\r\n\r\n\u81ea\u52d5\u9001\u4fe1\u3067\u3059\u3002\r\n\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n\r\n\u4e0b\u8a18\u306e\u30af\u30e9\u30b9\u4e88\u7d04\u3092\u53d7\u4ed8\u3057\u307e\u3057\u305f\u3002\r\n\r\n\u30af\u30e9\u30b9\u540d\uff1a {class_name} \r\n\u65e5\u7a0b\uff1a{date} \u3000{time}\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 7,
+                "email_template_id": 16,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {teacher_name},\r\n\r\nThis is an automated email.\r\n\r\n{student_name} has joined your class {class_name} held on {date} at {time}.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{teacher_name}\u69d8,\r\n\r\n\u3053\u308c\u306f\u81ea\u52d5\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n\r\n{student_name}\u304c{date}\u306e{time}\u306b\u958b\u50ac\u3055\u308c\u305f\u30af\u30e9\u30b9{class_name}\u306b\u53c2\u52a0\u3057\u307e\u3057\u305f\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 8,
+                "email_template_id": 15,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nThis is an automated email.\r\n\r\nYou are added to waitlist of the class {class_name}.\r\n{class_name} will be held on {date} at {time}.\r\n\r\nYou will receive an email notification if reservations for this class opens up again.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8,\r\n\r\n\u3053\u308c\u306f\u81ea\u52d5\u9001\u4fe1\u3067\u3059\u3002\r\n\r\n\u30af\u30e9\u30b9{class_name}\u306e\u30ad\u30e3\u30f3\u30bb\u30eb\u5f85\u3061\u3067\u3059\u3002\r\n{class_name}\u306f{date}\u306e{time}\u306b\u958b\u8b1b\u3055\u308c\u307e\u3059\u3002\r\n\r\n\u3053\u306e\u30af\u30e9\u30b9\u306b\u7a7a\u304d\u304c\u3067\u304d\u305f\u3089\u3001\u30e1\u30fc\u30eb\u901a\u77e5\u304c\u5c4a\u304d\u307e\u3059\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 9,
+                "email_template_id": 14,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nThis is an automated email.\r\n\r\nYour reservation for class {class_name} on following date(s) at {time} is cancelled. \r\nCancelled on date(s): {date}\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8,\r\n\r\n\u3053\u308c\u306f\u81ea\u52d5\u3067\u3059\u3002\r\n\r\n{class_name}\u306e\u4e88\u7d04\u3092\u30ad\u30e3\u30f3\u30bb\u30eb\u3057\u307e\u3057\u305f\u3002\r\n\u30ad\u30e3\u30f3\u30bb\u30eb\u3057\u305f\u65e5\u4ed8\uff1a{date}\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 10,
+                "email_template_id": 2,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nA spot you were waiting for has opened up in {class_name} on {date}!\r\nPlease click below to reserve or cancel.\r\n\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8,\r\n\r\n\u81ea\u52d5\u9001\u4fe1\u3067\u3059\u3002\r\n\r\n\u30ad\u30e3\u30f3\u30bb\u30eb\u5f85\u3061{date}\u306e{class_name}\u30af\u30e9\u30b9\u306b\u7a7a\u304d\u304c\u51fa\u307e\u3057\u305f\u3002\r\n\u4e0b\u8a18\u306e\u30dc\u30bf\u30f3\u304b\u3089\u4e88\u7d04\u78ba\u5b9a\u3092\u3057\u3066\u304f\u3060\u3055\u3044\u3002\r\n\r\nuTeach Cloud"
+            },
+            {
+                "id": 11,
+                "email_template_id": 2,
+                "type": 2,
+                "key": "reserve_button_text",
+                "text_en": "Reserve",
+                "text_ja": "\u4e88\u7d04\u3059\u308b"
+            },
+            {
+                "id": 12,
+                "email_template_id": 2,
+                "type": 2,
+                "key": "cancel_waitlist_button_text",
+                "text_en": "Cancel",
+                "text_ja": "\u30ad\u30e3\u30f3\u30bb\u30eb\u3059\u308b"
+            },
+            {
+                "id": 13,
+                "email_template_id": 4,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nYou've reached a teach as part of your course {course}.\r\n\r\nAs part of your course, you will need to take test {test}.\r\n\r\nuTeach Cloud",
+                "text_ja": "{student_name}\u69d8\r\n\r\n\u30b3\u30fc\u30b9{course}\u306e\u4e00\u90e8\u3068\u3057\u3066\u30c6\u30b9\u30c8\u3092\u53d7\u3051\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\r\n\r\n\u4e0b\u8a18\u306e\u30ea\u30f3\u30af\u306b\u3088\u308a\u53d7\u3051\u3066\u304f\u3060\u3055\u3044\u3002\r\n\r\nuTeach Cloud"
+            },
+            {
+                "id": 14,
+                "email_template_id": 4,
+                "type": 2,
+                "key": "test_button_text",
+                "text_en": "Take Test",
+                "text_ja": "\u30c6\u30b9\u30c8\u3092\u53d7\u3051\u308b"
+            },
+            {
+                "id": 15,
+                "email_template_id": 7,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Hi {teacher_name},\r\n\r\nYou've finished {lesson}, unit {unit}, course {course} on {date}.\r\n\r\nDon't forget to add paper test results!\r\n\r\nuTeach Cloud",
+                "text_ja": "{teacher_name}\u69d8\r\n\r\n{date}\u306e\u30ec\u30c3\u30b9\u30f3{lesson}\u3001\u30e6\u30cb\u30c3\u30c8{unit}\u3001\u30b3\u30fc\u30b9{course}\u306f\u3059\u3067\u306b\u7d42\u4e86\u3057\u3066\u3044\u307e\u3059\u3002\r\n\r\n\u7d19\u30c6\u30b9\u30c8\u306e\u8a18\u9332\u3092\u8ffd\u52a0\u3057\u3066\u304f\u3060\u3055\u3044\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 16,
+                "email_template_id": 7,
+                "type": 2,
+                "key": "test_button_text",
+                "text_en": "Add Test Records",
+                "text_ja": "\u7d19\u30c6\u30b9\u30c8\u8a18\u9332\u3092\u8ffd\u52a0\u3059\u308b"
+            },
+            {
+                "id": 17,
+                "email_template_id": 5,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {user_name},\r\n\r\nAs part of your course, you will need to take an assessment!\r\n\r\nuTeach Cloud",
+                "text_ja": "{user_name}\u69d8\r\n\r\n\u30b3\u30fc\u30b9\u306e\u4e00\u90e8\u3068\u3057\u3066\u3001{assessment}\u3092\u53d7\u3051\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 18,
+                "email_template_id": 5,
+                "type": 2,
+                "key": "assessment_button_text",
+                "text_en": "Take Assessment",
+                "text_ja": "\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u3092\u8a18\u5165\u3059\u308b"
+            },
+            {
+                "id": 19,
+                "email_template_id": 6,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {user_name},\r\n\r\nAs part of your course, you will need to take an assessment!\r\n\r\nuTeach Cloud",
+                "text_ja": "{user_name}\u69d8\r\n\r\n\u30b3\u30fc\u30b9\u306e\u4e00\u90e8\u3068\u3057\u3066\u3001{assessment}\u3092\u53d7\u3051\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 20,
+                "email_template_id": 6,
+                "type": 2,
+                "key": "assessment_button_text",
+                "text_en": "Take Assessment",
+                "text_ja": "\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u3092\u8a18\u5165\u3059\u308b"
+            },
+            {
+                "id": 21,
+                "email_template_id": 8,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nThis is an automated message. \r\n\r\nYou have successfully checked in at {date_time}.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8,\r\n\r\n\u81ea\u52d5\u9001\u4fe1\u30e1\u30c3\u30bb\u30fc\u30b8\u3067\u3059\u3002\r\n\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n\r\n{student_name}\u69d8\u304c {date_time}\u306b\u7121\u4e8b\u306b\u6559\u5ba4\u306b\u5230\u7740\u3057\u307e\u3057\u305f\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 22,
+                "email_template_id": 9,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nThis is an automated email. \r\n\r\nYou have successfully checked out at {date_time}.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8,\r\n\r\n\u81ea\u52d5\u9001\u4fe1\u30e1\u30fc\u30eb\u3067\u3059\u3002\r\n\r\n\u3044\u3064\u3082\u304a\u4e16\u8a71\u306b\u306a\u3063\u3066\u304a\u308a\u307e\u3059\u3002\r\n\r\n{student_name}\u69d8\u304c {date_time}\u306b\u7121\u4e8b\u306b\u6559\u5ba4\u304b\u3089\u51fa\u307e\u3057\u305f\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 23,
+                "email_template_id": 10,
+                "type": 2,
+                "key": "first_column_text",
+                "text_en": "Dear {student_name},\r\n\r\nThis is a reminder email about your reservation today.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8,\r\n\r\n\u4eca\u65e5\u306e\u30d9\u30f3\u3061\u3083\u3093\u82f1\u4f1a\u8a71\u306e\u30ec\u30c3\u30b9\u30f3\u6642\u9593\u306e\u78ba\u8a8d\u30e1\u30c3\u30bb\u30fc\u30b8\u3067\u3059\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 24,
+                "email_template_id": 10,
+                "type": 2,
+                "key": "signin_button_text",
+                "text_en": "Sign In",
+                "text_ja": "\u30ed\u30b0\u30a4\u30f3"
+            },
+            {
+                "id": 25,
+                "email_template_id": 10,
+                "type": 2,
+                "key": "cancel_class_button_text",
+                "text_en": "Cancel",
+                "text_ja": "\u30ad\u30e3\u30f3\u30bb\u30eb"
+            },
+            {
+                "id": 26,
+                "email_template_id": 10,
+                "type": 2,
+                "key": "cancel_event_button_text",
+                "text_en": "Cancel",
+                "text_ja": "\u30ad\u30e3\u30f3\u30bb\u30eb"
+            },
+            {
+                "id": 27,
+                "email_template_id": 11,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nYour assessment result for class {class_name} is available.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8\r\n\r\n\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u306e\u7d50\u679c\u304c\u898b\u308c\u308b\u3088\u3046\u306b\u306a\u308a\u307e\u3057\u305f\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 28,
+                "email_template_id": 11,
+                "type": 2,
+                "key": "assessment_button_text",
+                "text_en": "View Assessment",
+                "text_ja": "\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u8868\u793a"
+            },
+            {
+                "id": 29,
+                "email_template_id": 12,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {student_name},\r\n\r\nPlease follow the below link to reset your password.\r\n\r\nHave a great day!\r\n- uTeach Cloud",
+                "text_ja": "{student_name}\u69d8,\r\n\r\n\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u30ea\u30bb\u30c3\u30c8\u3059\u308b\u305f\u3081\u306e\u4e0b\u8a18\u306e\u30ea\u30f3\u30af\u3092\u4f7f\u3063\u3066\u304f\u3060\u3055\u3044\u3002\r\n\r\n\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3057\u307e\u3059\u3002\r\nuTeach Cloud"
+            },
+            {
+                "id": 30,
+                "email_template_id": 12,
+                "type": 2,
+                "key": "reset_password_button_text",
+                "text_en": "Password Reset",
+                "text_ja": "\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u30ea\u30bb\u30c3\u30c8\u3059\u308b"
+            },
+            {
+                "id": 31,
+                "email_template_id": 17,
+                "type": 2,
+                "key": "message_text",
+                "text_en": "Dear {username},\r\n\r\nClick the button below or use these Zoom details to login:\r\n\r\nMeeting ID: {zoom_meeting_id} \r\nPassword: {zoom_meeting_password}",
+                "text_ja": "{username}\u69d8,\r\n\r\n\u4e0b\u8a18\u306e\u30dc\u30bf\u30f3\u306b\u3066{date}\u306e{time}\u306b\u30af\u30e9\u30b9{class_name}\u306e\u30ba\u30fc\u30e0\u4f1a\u8b70\u306b\u53c2\u52a0\u3057\u3066\u304f\u3060\u3055\u3044\u3002\r\n\r\n\u53c8\u306f\u4e0b\u8a18\u306e\u60c5\u5831\u3067\u30ed\u30b0\u30a4\u30f3\u3059\u308b\uff1a\r\n\u4f1a\u8b70ID: {zoom_meeting_id}\r\n\u30d1\u30b9\u30ef\u30fc\u30c9: {zoom_meeting_password}"
+            },
+            {
+                "id": 32,
+                "email_template_id": 17,
+                "type": 2,
+                "key": "zoom_meeting_button_text",
+                "text_en": "Join Zoom Lesson",
+                "text_ja": "Zoom\u3067\u30af\u30e9\u30b9\u306b\u53c2\u52a0\u3059\u308b"
+            }
+        ]
+    },
+    "permissions": {
+        "eloquent": "\\App\\Permission",
+        "records": [
+            {
+                "id": 1,
+                "name": "class-list",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to view list of classes.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 2,
+                "name": "class-show",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to see the details of a class.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u8a73\u7d30\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 3,
+                "name": "class-create",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to create a new class.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u4f5c\u6210\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 4,
+                "name": "class-edit",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to edit a classes information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 5,
+                "name": "class-delete",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to delete a class.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u524a\u9664\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 6,
+                "name": "contact-list",
+                "guard_name": "web",
+                "category_id": 2,
+                "tooltip_en": "Allow user to view the list of contact records.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u9023\u7d61\u5e33\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 7,
+                "name": "contact-show",
+                "guard_name": "web",
+                "category_id": 2,
+                "tooltip_en": "Allow user to view a contact record.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u9023\u7d61\u8a73\u7d30\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002p"
+            },
+            {
+                "id": 8,
+                "name": "contact-delete",
+                "guard_name": "web",
+                "category_id": 2,
+                "tooltip_en": "Allow user to delete a contact record.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u9023\u7d61\u524a\u9664\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 9,
+                "name": "payment-list",
+                "guard_name": "web",
+                "category_id": 3,
+                "tooltip_en": "Allow user to view a list of payment records.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u652f\u6255\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 10,
+                "name": "payment-create",
+                "guard_name": "web",
+                "category_id": 3,
+                "tooltip_en": "Allow user to create a payment record.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u652f\u6255\u4f5c\u6210\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 11,
+                "name": "payment-delete",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to delete payment.",
+                "tooltip_ja": "Allow user\u652f\u6255\u524a\u9664\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 15,
+                "name": "schedule-list",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to view a list of scheduled classes.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 16,
+                "name": "student-list",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view a list of students.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 17,
+                "name": "student-create",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to create a student.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u4f5c\u6210\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 18,
+                "name": "student-show",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u8a73\u7d30\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 19,
+                "name": "student-edit",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to edit a student.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 20,
+                "name": "student-delete",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to delete a student.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u524a\u9664\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 21,
+                "name": "teacher-list",
+                "guard_name": "web",
+                "category_id": 6,
+                "tooltip_en": "Allow user to view the list of teachers.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u5148\u751f\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 22,
+                "name": "teacher-show",
+                "guard_name": "web",
+                "category_id": 6,
+                "tooltip_en": "Allow user to view teacher details.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u5148\u751f\u8a73\u7d30\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 23,
+                "name": "teacher-create",
+                "guard_name": "web",
+                "category_id": 6,
+                "tooltip_en": "Allow user to create a teacher.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u5148\u751f\u4f5c\u6210\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 24,
+                "name": "teacher-edit",
+                "guard_name": "web",
+                "category_id": 6,
+                "tooltip_en": "Allow user to edit teacher information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u5148\u751f\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 25,
+                "name": "teacher-delete",
+                "guard_name": "web",
+                "category_id": 6,
+                "tooltip_en": "Allow user to delete a teacher.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u5148\u751f\u524a\u9664\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 26,
+                "name": "attendance-add",
+                "guard_name": "web",
+                "category_id": 11,
+                "tooltip_en": "Allow user to add attendance record.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u51fa\u5e2d\u8ffd\u52a0\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 27,
+                "name": "Role-Management",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to access role management settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ed\u30fc\u30eb\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 28,
+                "name": "User-Management",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to access user management.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30e6\u30fc\u30b6\u30fc\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 29,
+                "name": "calendar",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to view calendar (Student View).",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ab\u30ec\u30f3\u30c0\u30fc\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 30,
+                "name": "reservation-list",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to view reservation list. ",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u4e88\u7d04\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 31,
+                "name": "school-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to access school settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u5b66\u6821\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 32,
+                "name": "cancel-class",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to cancel a class.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u30fc\u524a\u9664\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 33,
+                "name": "user-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to access user settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30e6\u30fc\u30b6\u30fc\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 34,
+                "name": "course",
+                "guard_name": "web",
+                "category_id": 15,
+                "tooltip_en": "Allow user to access course functionality.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b3\u30fc\u30b9\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 35,
+                "name": "library",
+                "guard_name": "web",
+                "category_id": 14,
+                "tooltip_en": "Allow user to access library functionality.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u56f3\u66f8\u9928\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 36,
+                "name": "test",
+                "guard_name": "web",
+                "category_id": 15,
+                "tooltip_en": "Allow user to access test functionality.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30c6\u30b9\u30c8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 37,
+                "name": "assessment",
+                "guard_name": "web",
+                "category_id": 15,
+                "tooltip_en": "Allow user to access assessment functionality.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 38,
+                "name": "class-category",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to access list of class categories.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u30ab\u30c6\u30b4\u30ea\u30fc\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 39,
+                "name": "event",
+                "guard_name": "web",
+                "category_id": 14,
+                "tooltip_en": "Allow user to access event functionality.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30a4\u30d9\u30f3\u30c8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 40,
+                "name": "calendar-hide-full-class",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Prevent user from being able to see full classes.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306e\u30ab\u30ec\u30f3\u30c0\u30fc\u306b\u6e80\u5e2d\u306e\u30af\u30e9\u30b9\u3092\u975e\u8868\u793a\u306b\u3057\u307e\u3059\u3002"
+            },
+            {
+                "id": 41,
+                "name": "schedule-details",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to see schedule details.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u8a73\u7d30\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 42,
+                "name": "take-student-test",
+                "guard_name": "web",
+                "category_id": 15,
+                "tooltip_en": "Allow user to take an online test (Student View).",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30c6\u30b9\u30c8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\uff08\u751f\u5f92\u7528\uff09\u3002"
+            },
+            {
+                "id": 43,
+                "name": "take-assessment",
+                "guard_name": "web",
+                "category_id": 15,
+                "tooltip_en": "Allow user to take an assessment (Student View).",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\uff08\u751f\u5f92\u7528\uff09\u3002"
+            },
+            {
+                "id": 44,
+                "name": "schedule-add",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to add a class to the schedule.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u4f5c\u6210\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 45,
+                "name": "email-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to access email settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30e1\u30fc\u30eb\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 46,
+                "name": "student-impersonate",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to impersonate student logins.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u306a\u308a\u3059\u307e\u3057\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 47,
+                "name": "student-map",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student map.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u30de\u30c3\u30d7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 48,
+                "name": "todo-mytodos",
+                "guard_name": "web",
+                "category_id": 7,
+                "tooltip_en": "Allow user to see My To-Do page.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bMy To-Do\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 49,
+                "name": "todo-list",
+                "guard_name": "web",
+                "category_id": 7,
+                "tooltip_en": "Allow user to see To-Do list page.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bTo-Do\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 50,
+                "name": "todo-create",
+                "guard_name": "web",
+                "category_id": 7,
+                "tooltip_en": "Allow user to create To-Do.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bTo-Do\u4f5c\u6210\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 51,
+                "name": "todo-edit",
+                "guard_name": "web",
+                "category_id": 7,
+                "tooltip_en": "Allow user to edit To-Do.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bTo-Do\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 52,
+                "name": "todo-delete",
+                "guard_name": "web",
+                "category_id": 7,
+                "tooltip_en": "Allow user to delete To-Do.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bTo-Do\u524a\u9664\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 53,
+                "name": "student-search",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to search student information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u691c\u7d22\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 54,
+                "name": "class-usage",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to view class usage information (Student View).",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30af\u30e9\u30b9\u4f7f\u7528\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 55,
+                "name": "todo-progress",
+                "guard_name": "web",
+                "category_id": 7,
+                "tooltip_en": "Allow user to view To-Do progress information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bTo-Do\u9032\u6b69\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 56,
+                "name": "activity-logs",
+                "guard_name": "web",
+                "category_id": 13,
+                "tooltip_en": "Allow user to view activity logs.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30a2\u30af\u30c6\u30a3\u30d3\u30c6\u30a3\u30ed\u30b0\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 57,
+                "name": "allow-reservation-on-past-classes",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to make reservations on past classes. Basically, this should not be possible for regular users, but might be useful for admins who would like to add in some past attendance records.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u904e\u53bb\u30af\u30e9\u30b9\u306e\u4e88\u7d04\u6a29\u9650\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 58,
+                "name": "children",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "children_tooltip",
+                "tooltip_ja": "children_tooltip"
+            },
+            {
+                "id": 59,
+                "name": "st-classes",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "st-classes_tooltip",
+                "tooltip_ja": "st-classes_tooltip"
+            },
+            {
+                "id": 60,
+                "name": "st-class-details",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "st-class-details_tooltip",
+                "tooltip_ja": "st-class-details_tooltip"
+            },
+            {
+                "id": 61,
+                "name": "st-assessments",
+                "guard_name": "web",
+                "category_id": 15,
+                "tooltip_en": "st-assessments_tooltip",
+                "tooltip_ja": "st-assessments_tooltip"
+            },
+            {
+                "id": 62,
+                "name": "todo-progress-details",
+                "guard_name": "web",
+                "category_id": 7,
+                "tooltip_en": "Allow user to view To-Do progress details.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bTo-Do\u9032\u6b69\u8a73\u7d30\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 64,
+                "name": "stats",
+                "guard_name": "web",
+                "category_id": 9,
+                "tooltip_en": "Allow users to view stats widget and page.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u7d71\u8a08\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 65,
+                "name": "waitlisted-students",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to view list of waitlisted students.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ad\u30e3\u30f3\u30bb\u30eb\u5f85\u3061\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 66,
+                "name": "control-attendance",
+                "guard_name": "web",
+                "category_id": 11,
+                "tooltip_en": "Allow user to control attendance.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u51fa\u5e2d\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 67,
+                "name": "manage-tags",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to manage tags on tag settings page.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30bf\u30b0\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 68,
+                "name": "view-student-tags",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student tags.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30bf\u30b0\u8868\u793a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 69,
+                "name": "edit-student-tags",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to edit student tags.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30bf\u30b0\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 70,
+                "name": "edit-schedule",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to edit schedule information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 71,
+                "name": "manage-availability-selection-calendars",
+                "guard_name": "web",
+                "category_id": 1,
+                "tooltip_en": "Allow user to manage the availability selection calendar.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u7a7a\u304d\u72b6\u6cc1\u30ab\u30ec\u30f3\u30c0\u30fc\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 72,
+                "name": "manage-availability-timeslots",
+                "guard_name": "web",
+                "category_id": 9,
+                "tooltip_en": "Allow user to manage timeslots on the availability selection calendar.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u7a7a\u304d\u72b6\u6cc1\u30ab\u30ec\u30f3\u30c0\u30fc\u306e\u6642\u9593\u5e2f\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 73,
+                "name": "view-availability-responses",
+                "guard_name": "web",
+                "category_id": 9,
+                "tooltip_en": "Allow user to view responses to availability selection calendar assessments.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u7a7a\u304d\u72b6\u6cc1\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 74,
+                "name": "payment-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to manage payment settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u652f\u6255\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 75,
+                "name": "payment-mark-as-paid",
+                "guard_name": "web",
+                "category_id": 3,
+                "tooltip_en": "Allow user to mark a payment record as paid.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u652f\u6255\u5b8c\u4e86\u6a29\u9650\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 76,
+                "name": "payment-edit",
+                "guard_name": "web",
+                "category_id": 3,
+                "tooltip_en": "Allow user to edit a payment record.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u652f\u6255\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 77,
+                "name": "st-payments",
+                "guard_name": "web",
+                "category_id": 3,
+                "tooltip_en": "Allow user to see a list of their payments (Student View).",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u652f\u6255\u4e00\u89a7\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\uff08\u751f\u5f92\u7528\uff09\u3002"
+            },
+            {
+                "id": 78,
+                "name": "manage-monthly-payments",
+                "guard_name": "web",
+                "category_id": 3,
+                "tooltip_en": "Allow user to manage monthly payments.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u6708\u3005\u652f\u6255\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 79,
+                "name": "edit-assessment-response",
+                "guard_name": "web",
+                "category_id": 15,
+                "tooltip_en": "Allow user to edit assessment responses.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u7d50\u679c\u7de8\u96c6\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 80,
+                "name": "accounting-payments",
+                "guard_name": "web",
+                "category_id": 3,
+                "tooltip_en": "Allow users to manage accounting payments.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u7d4c\u7406\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 81,
+                "name": "schedule-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to manage schedule settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 82,
+                "name": "manage-school-off-days",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to manage school holidays on the calendar.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u5b66\u6821\u4f11\u65e5\u7ba1\u7406\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 83,
+                "name": "manage-zoom-meetings-for-class",
+                "guard_name": "web",
+                "category_id": 4,
+                "tooltip_en": "Allow user to manage Zoom meetings for a class.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306bZoom\u30df\u30fc\u30c6\u30a3\u30f3\u30b0\u4f5c\u6210\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 84,
+                "name": "line-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to manage LINE settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30e9\u30a4\u30f3\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 85,
+                "name": "notification-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to access notification settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u901a\u77e5\u8a2d\u5b9a\u30da\u30fc\u30b8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 86,
+                "name": "lesson-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to manage lesson settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ec\u30c3\u30b9\u30f3\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 87,
+                "name": "terminal-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to manage terminal settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30bf\u30fc\u30df\u30ca\u30eb\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 88,
+                "name": "st-courses",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view courses (Student View).",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b3\u30fc\u30b9\u30da\u30fc\u30b8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 89,
+                "name": "st-courses-details",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to access course details (student view).",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30b3\u30fc\u30b9\u8a73\u7d30\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\uff08\u751f\u5f92\u7528\uff09\u3002"
+            },
+            {
+                "id": 90,
+                "name": "security-settings",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to edit security settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u30fc\u8a2d\u5b9a\u30da\u30fc\u30b8\u306e\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 91,
+                "name": "customfield-list",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to view list of custom fields.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ab\u30b9\u30bf\u30e0\u30d5\u30a3\u30fc\u30eb\u30c9\u4e00\u89a7\u8868\u793a\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 92,
+                "name": "customfield-create",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to create custom fields.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ab\u30b9\u30bf\u30e0\u30d5\u30a3\u30fc\u30eb\u30c9\u4f5c\u6210\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 93,
+                "name": "customfield-edit",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to edit custom fields.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ab\u30b9\u30bf\u30e0\u30d5\u30a3\u30fc\u30eb\u30c9\u7de8\u96c6\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 94,
+                "name": "customfield-delete",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to delete custom fields.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30ab\u30b9\u30bf\u30e0\u30d5\u30a3\u30fc\u30eb\u30c9\u524a\u9664\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 95,
+                "name": "student-info",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u500b\u4eba\u60c5\u5831\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 96,
+                "name": "student-contact",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student contact information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u9023\u7d61\u5e33\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 97,
+                "name": "student-payment-settings",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student payment settings.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u652f\u6255\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 98,
+                "name": "student-course",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student course information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u30b3\u30fc\u30b9\u8a2d\u5b9a\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 99,
+                "name": "student-payment",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student payment information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u652f\u6255\u60c5\u5831\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 100,
+                "name": "student-monthly-payment",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student montly payment information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u6708\u3005\u652f\u6255\u60c5\u5831\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 101,
+                "name": "student-other-payment",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student other payment information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u305d\u306e\u4ed6\u306e\u652f\u6255\u60c5\u5831\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 102,
+                "name": "student-event-payment",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student event payment information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u30a4\u30d9\u30f3\u30c8\u652f\u6255\u60c5\u5831\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 103,
+                "name": "student-books",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student book checkout history.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u56f3\u66f8\u9928\u6b74\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 104,
+                "name": "student-test-result",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student test results.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u30c6\u30b9\u30c8\u7d50\u679c\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 105,
+                "name": "student-paper-result",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student paper test results.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u7d19\u30c6\u30b9\u30c8\u7d50\u679c\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 106,
+                "name": "student-assessment-result",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student assessment results.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u30a2\u30bb\u30b9\u30e1\u30f3\u30c8\u7d50\u679c\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 107,
+                "name": "student-todo",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student to-do information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92To-Do\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 108,
+                "name": "student-class-usage",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to view student class usage information.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u30af\u30e9\u30b9\u4f7f\u7528\u6b74\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 109,
+                "name": "student-add-payment",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to add student payment.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u652f\u6255\u8ffd\u52a0\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 110,
+                "name": "student-add-montly-payment",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to add student monthly payment.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u6708\u3005\u652f\u6255\u8ffd\u52a0\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 111,
+                "name": "student-add-contact",
+                "guard_name": "web",
+                "category_id": 5,
+                "tooltip_en": "Allow user to add student contact.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u751f\u5f92\u9023\u7d61\u8ffd\u52a0\u306e\u30a2\u30af\u30bb\u30b9\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 112,
+                "name": "footerlink-edit",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to edit footer links.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30d5\u30c3\u30bf\u30fc\u30ea\u30f3\u30af\u7de8\u96c6\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 113,
+                "name": "footerlink-delete",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to delete footer links.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30d5\u30c3\u30bf\u30fc\u30ea\u30f3\u30af\u524a\u9664\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 114,
+                "name": "footerlink-list",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to view footer links.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30d5\u30c3\u30bf\u30fc\u30ea\u30f3\u30af\u8868\u793a\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 115,
+                "name": "footerlink-create",
+                "guard_name": "web",
+                "category_id": 8,
+                "tooltip_en": "Allow user to create footer links.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30d5\u30c3\u30bf\u30fc\u30ea\u30f3\u30af\u4f5c\u6210\u30a2\u30af\u30bb\u30b9\u3092\u8a31\u53ef\u3059\u308b\u3002"
+            },
+            {
+                "id": 116,
+                "name": "adminfiles-list",
+                "guard_name": "web",
+                "category_id": 9,
+                "tooltip_en": "Allow user to view admin file list.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7\u8868\u793a\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            },
+            {
+                "id": 117,
+                "name": "adminfiles-create",
+                "guard_name": "web",
+                "category_id": 9,
+                "tooltip_en": "Allow user to add file to admin file list.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7\u4f5c\u6210\u6a29\u9650\u3092\u4e0e\u3048\u308b"
+            },
+            {
+                "id": 118,
+                "name": "adminfiles-delete",
+                "guard_name": "web",
+                "category_id": 9,
+                "tooltip_en": "Allow user to delete file from admin file list.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7\u4f5c\u6210\u6a29\u9650\u3092\u4e0e\u3048\u308b"
+            },
+            {
+                "id": 119,
+                "name": "adminfiles-category-save",
+                "guard_name": "web",
+                "category_id": 9,
+                "tooltip_en": "Allow user to save file categories in the admin file section.",
+                "tooltip_ja": "\u30e6\u30fc\u30b6\u30fc\u306b\u7ba1\u7406\u30d5\u30a1\u30a4\u30eb\u30ab\u30c6\u30b4\u30ea\u30fc\u3092\u4f5c\u6210\u3059\u308b\u6a29\u9650\u3092\u4e0e\u3048\u308b\u3002"
+            }
+        ]
+    },
+    "roles": {
+        "eloquent": "\\App\\Role",
+        "records": [
+            {
+                "id": 1,
+                "name": "Student",
+                "guard_name": "web",
+                "login_redirect_path": "\/schedule\/calendar",
+                "is_student": 1,
+                "default_lang": "ja",
+                "send_login_details": 1,
+                "can_login": 1,
+                "can_add_user": 0
+            },
+            {
+                "id": 2,
+                "name": "Teacher",
+                "guard_name": "web",
+                "login_redirect_path": "\/",
+                "is_student": 0,
+                "default_lang": null,
+                "send_login_details": 1,
+                "can_login": 1,
+                "can_add_user": 0
+            },
+            {
+                "id": 3,
+                "name": "Super Admin",
+                "guard_name": "web",
+                "login_redirect_path": "\/",
+                "is_student": 0,
+                "default_lang": null,
+                "send_login_details": 1,
+                "can_login": 1,
+                "can_add_user": 1
+            },
+            {
+                "id": 4,
+                "name": "Librarian",
+                "guard_name": "web",
+                "login_redirect_path": "\/",
+                "is_student": 0,
+                "default_lang": null,
+                "send_login_details": 1,
+                "can_login": 1,
+                "can_add_user": 1
+            },
+            {
+                "id": 5,
+                "name": "Admin",
+                "guard_name": "web",
+                "login_redirect_path": "\/",
+                "is_student": 0,
+                "default_lang": null,
+                "send_login_details": 1,
+                "can_login": 1,
+                "can_add_user": 1
+            },
+            {
+                "id": 6,
+                "name": "Prospective Student",
+                "guard_name": "web",
+                "login_redirect_path": "\/schedule\/calendar",
+                "is_student": 1,
+                "default_lang": null,
+                "send_login_details": 0,
+                "can_login": 1,
+                "can_add_user": 0
+            },
+            {
+                "id": 7,
+                "name": "Private Student",
+                "guard_name": "web",
+                "login_redirect_path": "\/schedule\/calendar",
+                "is_student": 1,
+                "default_lang": null,
+                "send_login_details": 1,
+                "can_login": 1,
+                "can_add_user": 0
+            },
+            {
+                "id": 8,
+                "name": "parent",
+                "guard_name": "web",
+                "login_redirect_path": "\/children",
+                "is_student": 0,
+                "default_lang": null,
+                "send_login_details": 1,
+                "can_login": 1,
+                "can_add_user": 1
+            },
+            {
+                "id": 9,
+                "name": "Archived Student",
+                "guard_name": "web",
+                "login_redirect_path": "\/",
+                "is_student": 1,
+                "default_lang": null,
+                "send_login_details": 0,
+                "can_login": 0,
+                "can_add_user": 0
+            },
+            {
+                "id": 10,
+                "name": "Archived Teacher",
+                "guard_name": "web",
+                "login_redirect_path": "\/",
+                "is_student": 0,
+                "default_lang": null,
+                "send_login_details": 0,
+                "can_login": 0,
+                "can_add_user": 0
+            }
+        ]
+    },
+    "role_has_permissions": {
+        "eloquent": null,
+        "records": [
+            {
+                "permission_id": 29,
+                "role_id": 1
+            },
+            {
+                "permission_id": 30,
+                "role_id": 1
+            },
+            {
+                "permission_id": 33,
+                "role_id": 1
+            },
+            {
+                "permission_id": 43,
+                "role_id": 1
+            },
+            {
+                "permission_id": 54,
+                "role_id": 1
+            },
+            {
+                "permission_id": 59,
+                "role_id": 1
+            },
+            {
+                "permission_id": 60,
+                "role_id": 1
+            },
+            {
+                "permission_id": 61,
+                "role_id": 1
+            },
+            {
+                "permission_id": 77,
+                "role_id": 1
+            },
+            {
+                "permission_id": 88,
+                "role_id": 1
+            },
+            {
+                "permission_id": 89,
+                "role_id": 1
+            },
+            {
+                "permission_id": 15,
+                "role_id": 2
+            },
+            {
+                "permission_id": 26,
+                "role_id": 2
+            },
+            {
+                "permission_id": 34,
+                "role_id": 2
+            },
+            {
+                "permission_id": 35,
+                "role_id": 2
+            },
+            {
+                "permission_id": 41,
+                "role_id": 2
+            },
+            {
+                "permission_id": 68,
+                "role_id": 2
+            },
+            {
+                "permission_id": 69,
+                "role_id": 2
+            },
+            {
+                "permission_id": 89,
+                "role_id": 2
+            },
+            {
+                "permission_id": 98,
+                "role_id": 2
+            },
+            {
+                "permission_id": 103,
+                "role_id": 2
+            },
+            {
+                "permission_id": 104,
+                "role_id": 2
+            },
+            {
+                "permission_id": 105,
+                "role_id": 2
+            },
+            {
+                "permission_id": 1,
+                "role_id": 3
+            },
+            {
+                "permission_id": 2,
+                "role_id": 3
+            },
+            {
+                "permission_id": 3,
+                "role_id": 3
+            },
+            {
+                "permission_id": 4,
+                "role_id": 3
+            },
+            {
+                "permission_id": 5,
+                "role_id": 3
+            },
+            {
+                "permission_id": 6,
+                "role_id": 3
+            },
+            {
+                "permission_id": 7,
+                "role_id": 3
+            },
+            {
+                "permission_id": 8,
+                "role_id": 3
+            },
+            {
+                "permission_id": 9,
+                "role_id": 3
+            },
+            {
+                "permission_id": 10,
+                "role_id": 3
+            },
+            {
+                "permission_id": 11,
+                "role_id": 3
+            },
+            {
+                "permission_id": 15,
+                "role_id": 3
+            },
+            {
+                "permission_id": 16,
+                "role_id": 3
+            },
+            {
+                "permission_id": 17,
+                "role_id": 3
+            },
+            {
+                "permission_id": 18,
+                "role_id": 3
+            },
+            {
+                "permission_id": 19,
+                "role_id": 3
+            },
+            {
+                "permission_id": 20,
+                "role_id": 3
+            },
+            {
+                "permission_id": 21,
+                "role_id": 3
+            },
+            {
+                "permission_id": 22,
+                "role_id": 3
+            },
+            {
+                "permission_id": 23,
+                "role_id": 3
+            },
+            {
+                "permission_id": 24,
+                "role_id": 3
+            },
+            {
+                "permission_id": 25,
+                "role_id": 3
+            },
+            {
+                "permission_id": 26,
+                "role_id": 3
+            },
+            {
+                "permission_id": 27,
+                "role_id": 3
+            },
+            {
+                "permission_id": 28,
+                "role_id": 3
+            },
+            {
+                "permission_id": 31,
+                "role_id": 3
+            },
+            {
+                "permission_id": 32,
+                "role_id": 3
+            },
+            {
+                "permission_id": 33,
+                "role_id": 3
+            },
+            {
+                "permission_id": 34,
+                "role_id": 3
+            },
+            {
+                "permission_id": 35,
+                "role_id": 3
+            },
+            {
+                "permission_id": 38,
+                "role_id": 3
+            },
+            {
+                "permission_id": 41,
+                "role_id": 3
+            },
+            {
+                "permission_id": 44,
+                "role_id": 3
+            },
+            {
+                "permission_id": 45,
+                "role_id": 3
+            },
+            {
+                "permission_id": 46,
+                "role_id": 3
+            },
+            {
+                "permission_id": 47,
+                "role_id": 3
+            },
+            {
+                "permission_id": 53,
+                "role_id": 3
+            },
+            {
+                "permission_id": 56,
+                "role_id": 3
+            },
+            {
+                "permission_id": 57,
+                "role_id": 3
+            },
+            {
+                "permission_id": 64,
+                "role_id": 3
+            },
+            {
+                "permission_id": 65,
+                "role_id": 3
+            },
+            {
+                "permission_id": 66,
+                "role_id": 3
+            },
+            {
+                "permission_id": 67,
+                "role_id": 3
+            },
+            {
+                "permission_id": 68,
+                "role_id": 3
+            },
+            {
+                "permission_id": 69,
+                "role_id": 3
+            },
+            {
+                "permission_id": 70,
+                "role_id": 3
+            },
+            {
+                "permission_id": 71,
+                "role_id": 3
+            },
+            {
+                "permission_id": 72,
+                "role_id": 3
+            },
+            {
+                "permission_id": 73,
+                "role_id": 3
+            },
+            {
+                "permission_id": 74,
+                "role_id": 3
+            },
+            {
+                "permission_id": 75,
+                "role_id": 3
+            },
+            {
+                "permission_id": 76,
+                "role_id": 3
+            },
+            {
+                "permission_id": 78,
+                "role_id": 3
+            },
+            {
+                "permission_id": 80,
+                "role_id": 3
+            },
+            {
+                "permission_id": 81,
+                "role_id": 3
+            },
+            {
+                "permission_id": 82,
+                "role_id": 3
+            },
+            {
+                "permission_id": 83,
+                "role_id": 3
+            },
+            {
+                "permission_id": 84,
+                "role_id": 3
+            },
+            {
+                "permission_id": 85,
+                "role_id": 3
+            },
+            {
+                "permission_id": 86,
+                "role_id": 3
+            },
+            {
+                "permission_id": 87,
+                "role_id": 3
+            },
+            {
+                "permission_id": 90,
+                "role_id": 3
+            },
+            {
+                "permission_id": 91,
+                "role_id": 3
+            },
+            {
+                "permission_id": 92,
+                "role_id": 3
+            },
+            {
+                "permission_id": 93,
+                "role_id": 3
+            },
+            {
+                "permission_id": 94,
+                "role_id": 3
+            },
+            {
+                "permission_id": 95,
+                "role_id": 3
+            },
+            {
+                "permission_id": 96,
+                "role_id": 3
+            },
+            {
+                "permission_id": 97,
+                "role_id": 3
+            },
+            {
+                "permission_id": 98,
+                "role_id": 3
+            },
+            {
+                "permission_id": 99,
+                "role_id": 3
+            },
+            {
+                "permission_id": 100,
+                "role_id": 3
+            },
+            {
+                "permission_id": 101,
+                "role_id": 3
+            },
+            {
+                "permission_id": 102,
+                "role_id": 3
+            },
+            {
+                "permission_id": 103,
+                "role_id": 3
+            },
+            {
+                "permission_id": 104,
+                "role_id": 3
+            },
+            {
+                "permission_id": 105,
+                "role_id": 3
+            },
+            {
+                "permission_id": 106,
+                "role_id": 3
+            },
+            {
+                "permission_id": 107,
+                "role_id": 3
+            },
+            {
+                "permission_id": 108,
+                "role_id": 3
+            },
+            {
+                "permission_id": 109,
+                "role_id": 3
+            },
+            {
+                "permission_id": 110,
+                "role_id": 3
+            },
+            {
+                "permission_id": 111,
+                "role_id": 3
+            },
+            {
+                "permission_id": 112,
+                "role_id": 3
+            },
+            {
+                "permission_id": 113,
+                "role_id": 3
+            },
+            {
+                "permission_id": 114,
+                "role_id": 3
+            },
+            {
+                "permission_id": 115,
+                "role_id": 3
+            },
+            {
+                "permission_id": 116,
+                "role_id": 3
+            },
+            {
+                "permission_id": 117,
+                "role_id": 3
+            },
+            {
+                "permission_id": 118,
+                "role_id": 3
+            },
+            {
+                "permission_id": 119,
+                "role_id": 3
+            },
+            {
+                "permission_id": 35,
+                "role_id": 4
+            },
+            {
+                "permission_id": 1,
+                "role_id": 5
+            },
+            {
+                "permission_id": 2,
+                "role_id": 5
+            },
+            {
+                "permission_id": 3,
+                "role_id": 5
+            },
+            {
+                "permission_id": 4,
+                "role_id": 5
+            },
+            {
+                "permission_id": 5,
+                "role_id": 5
+            },
+            {
+                "permission_id": 6,
+                "role_id": 5
+            },
+            {
+                "permission_id": 7,
+                "role_id": 5
+            },
+            {
+                "permission_id": 8,
+                "role_id": 5
+            },
+            {
+                "permission_id": 9,
+                "role_id": 5
+            },
+            {
+                "permission_id": 10,
+                "role_id": 5
+            },
+            {
+                "permission_id": 11,
+                "role_id": 5
+            },
+            {
+                "permission_id": 15,
+                "role_id": 5
+            },
+            {
+                "permission_id": 16,
+                "role_id": 5
+            },
+            {
+                "permission_id": 17,
+                "role_id": 5
+            },
+            {
+                "permission_id": 18,
+                "role_id": 5
+            },
+            {
+                "permission_id": 19,
+                "role_id": 5
+            },
+            {
+                "permission_id": 20,
+                "role_id": 5
+            },
+            {
+                "permission_id": 21,
+                "role_id": 5
+            },
+            {
+                "permission_id": 22,
+                "role_id": 5
+            },
+            {
+                "permission_id": 23,
+                "role_id": 5
+            },
+            {
+                "permission_id": 24,
+                "role_id": 5
+            },
+            {
+                "permission_id": 25,
+                "role_id": 5
+            },
+            {
+                "permission_id": 26,
+                "role_id": 5
+            },
+            {
+                "permission_id": 30,
+                "role_id": 5
+            },
+            {
+                "permission_id": 31,
+                "role_id": 5
+            },
+            {
+                "permission_id": 32,
+                "role_id": 5
+            },
+            {
+                "permission_id": 33,
+                "role_id": 5
+            },
+            {
+                "permission_id": 34,
+                "role_id": 5
+            },
+            {
+                "permission_id": 35,
+                "role_id": 5
+            },
+            {
+                "permission_id": 38,
+                "role_id": 5
+            },
+            {
+                "permission_id": 41,
+                "role_id": 5
+            },
+            {
+                "permission_id": 44,
+                "role_id": 5
+            },
+            {
+                "permission_id": 45,
+                "role_id": 5
+            },
+            {
+                "permission_id": 46,
+                "role_id": 5
+            },
+            {
+                "permission_id": 47,
+                "role_id": 5
+            },
+            {
+                "permission_id": 53,
+                "role_id": 5
+            },
+            {
+                "permission_id": 56,
+                "role_id": 5
+            },
+            {
+                "permission_id": 57,
+                "role_id": 5
+            },
+            {
+                "permission_id": 64,
+                "role_id": 5
+            },
+            {
+                "permission_id": 65,
+                "role_id": 5
+            },
+            {
+                "permission_id": 66,
+                "role_id": 5
+            },
+            {
+                "permission_id": 67,
+                "role_id": 5
+            },
+            {
+                "permission_id": 68,
+                "role_id": 5
+            },
+            {
+                "permission_id": 69,
+                "role_id": 5
+            },
+            {
+                "permission_id": 70,
+                "role_id": 5
+            },
+            {
+                "permission_id": 71,
+                "role_id": 5
+            },
+            {
+                "permission_id": 72,
+                "role_id": 5
+            },
+            {
+                "permission_id": 73,
+                "role_id": 5
+            },
+            {
+                "permission_id": 74,
+                "role_id": 5
+            },
+            {
+                "permission_id": 75,
+                "role_id": 5
+            },
+            {
+                "permission_id": 76,
+                "role_id": 5
+            },
+            {
+                "permission_id": 78,
+                "role_id": 5
+            },
+            {
+                "permission_id": 80,
+                "role_id": 5
+            },
+            {
+                "permission_id": 81,
+                "role_id": 5
+            },
+            {
+                "permission_id": 82,
+                "role_id": 5
+            },
+            {
+                "permission_id": 83,
+                "role_id": 5
+            },
+            {
+                "permission_id": 84,
+                "role_id": 5
+            },
+            {
+                "permission_id": 85,
+                "role_id": 5
+            },
+            {
+                "permission_id": 86,
+                "role_id": 5
+            },
+            {
+                "permission_id": 87,
+                "role_id": 5
+            },
+            {
+                "permission_id": 88,
+                "role_id": 5
+            },
+            {
+                "permission_id": 89,
+                "role_id": 5
+            },
+            {
+                "permission_id": 90,
+                "role_id": 5
+            },
+            {
+                "permission_id": 91,
+                "role_id": 5
+            },
+            {
+                "permission_id": 92,
+                "role_id": 5
+            },
+            {
+                "permission_id": 93,
+                "role_id": 5
+            },
+            {
+                "permission_id": 94,
+                "role_id": 5
+            },
+            {
+                "permission_id": 95,
+                "role_id": 5
+            },
+            {
+                "permission_id": 96,
+                "role_id": 5
+            },
+            {
+                "permission_id": 97,
+                "role_id": 5
+            },
+            {
+                "permission_id": 98,
+                "role_id": 5
+            },
+            {
+                "permission_id": 99,
+                "role_id": 5
+            },
+            {
+                "permission_id": 100,
+                "role_id": 5
+            },
+            {
+                "permission_id": 101,
+                "role_id": 5
+            },
+            {
+                "permission_id": 102,
+                "role_id": 5
+            },
+            {
+                "permission_id": 103,
+                "role_id": 5
+            },
+            {
+                "permission_id": 104,
+                "role_id": 5
+            },
+            {
+                "permission_id": 105,
+                "role_id": 5
+            },
+            {
+                "permission_id": 106,
+                "role_id": 5
+            },
+            {
+                "permission_id": 107,
+                "role_id": 5
+            },
+            {
+                "permission_id": 108,
+                "role_id": 5
+            },
+            {
+                "permission_id": 109,
+                "role_id": 5
+            },
+            {
+                "permission_id": 110,
+                "role_id": 5
+            },
+            {
+                "permission_id": 111,
+                "role_id": 5
+            },
+            {
+                "permission_id": 112,
+                "role_id": 5
+            },
+            {
+                "permission_id": 113,
+                "role_id": 5
+            },
+            {
+                "permission_id": 114,
+                "role_id": 5
+            },
+            {
+                "permission_id": 115,
+                "role_id": 5
+            },
+            {
+                "permission_id": 29,
+                "role_id": 6
+            },
+            {
+                "permission_id": 40,
+                "role_id": 6
+            },
+            {
+                "permission_id": 29,
+                "role_id": 7
+            },
+            {
+                "permission_id": 40,
+                "role_id": 7
+            },
+            {
+                "permission_id": 60,
+                "role_id": 7
+            },
+            {
+                "permission_id": 77,
+                "role_id": 7
+            },
+            {
+                "permission_id": 46,
+                "role_id": 8
+            },
+            {
+                "permission_id": 58,
+                "role_id": 8
+            }
+        ]
+    },
+    "schedules": {
+        "eloquent": "\\App\\Schedules",
+        "records": [
+            {
+                "id": 1,
+                "class_id": 1,
+                "teacher_id": 1,
+                "start_time": "20:00:00",
+                "end_time": "21:00:00",
+                "day_of_week": "Monday",
+                "date": null,
+                "type": 0,
+                "start_date": "2020-04-01",
+                "end_date": "2021-03-31",
+                "description": null
+            },
+            {
+                "id": 2,
+                "class_id": 2,
+                "teacher_id": 1,
+                "start_time": "19:00:00",
+                "end_time": "20:00:00",
+                "day_of_week": "Tuesday",
+                "date": null,
+                "type": 0,
+                "start_date": "2020-04-01",
+                "end_date": "2021-03-31",
+                "description": null
+            },
+            {
+                "id": 3,
+                "class_id": 3,
+                "teacher_id": 1,
+                "start_time": "18:30:00",
+                "end_time": "19:30:00",
+                "day_of_week": "Wednesday",
+                "date": null,
+                "type": 0,
+                "start_date": "2020-04-01",
+                "end_date": "2021-03-31",
+                "description": null
+            },
+            {
+                "id": 4,
+                "class_id": 4,
+                "teacher_id": 1,
+                "start_time": "19:00:00",
+                "end_time": "19:30:00",
+                "day_of_week": "Thursday",
+                "date": null,
+                "type": 0,
+                "start_date": "2020-04-01",
+                "end_date": "2021-03-31",
+                "description": null
+            },
+            {
+                "id": 5,
+                "class_id": 5,
+                "teacher_id": 1,
+                "start_time": "19:30:00",
+                "end_time": "20:30:00",
+                "day_of_week": "Friday",
+                "date": null,
+                "type": 0,
+                "start_date": "2020-04-01",
+                "end_date": "2021-03-31",
+                "description": null
+            },
+            {
+                "id": 6,
+                "class_id": 1,
+                "teacher_id": 1,
+                "start_time": "17:00:00",
+                "end_time": "18:00:00",
+                "day_of_week": "Saturday",
+                "date": null,
+                "type": 0,
+                "start_date": "2020-04-01",
+                "end_date": "2021-03-31",
+                "description": null
+            }
+        ]
+    },
+    "settings": {
+        "eloquent": "\\App\\Settings",
+        "records": [
+            {
+                "id": 1,
+                "name": "limit_number_of_students_per_class",
+                "value": "5"
+            },
+            {
+                "id": 2,
+                "name": "number_of_days_use_payment_points",
+                "value": "30"
+            },
+            {
+                "id": 3,
+                "name": "use_points",
+                "value": "false"
+            },
+            {
+                "id": 4,
+                "name": "use_monthly_payments",
+                "value": "true"
+            },
+            {
+                "id": 5,
+                "name": "library_expected_checkin_days",
+                "value": "7"
+            },
+            {
+                "id": 6,
+                "name": "library_book_levels",
+                "value": "A1,A2,B1,B2,C1"
+            },
+            {
+                "id": 7,
+                "name": "class_student_levels",
+                "value": "A0,A1,A2,B1,B2,C1"
+            },
+            {
+                "id": 8,
+                "name": "default_calendar_view",
+                "value": "agendaWeek"
+            },
+            {
+                "id": 9,
+                "name": "default_calendar_color_coding",
+                "value": "blue"
+            },
+            {
+                "id": 10,
+                "name": "default_signup_role",
+                "value": "student"
+            },
+            {
+                "id": 11,
+                "name": "default_show_calendar",
+                "value": "11:00;21:00"
+            },
+            {
+                "id": 12,
+                "name": "working_days",
+                "value": "mon,tue,wed,thu,fri,sat"
+            },
+            {
+                "id": 13,
+                "name": "default_class_length",
+                "value": "01:00"
+            },
+            {
+                "id": 14,
+                "name": "school_name",
+                "value": "Seed Data"
+            },
+            {
+                "id": 15,
+                "name": "default_lang",
+                "value": "en"
+            },
+            {
+                "id": 16,
+                "name": "payment_categories",
+                "value": "Classes,Textbooks,Fees"
+            },
+            {
+                "id": 17,
+                "name": "google_map_api_key",
+                "value": ""
+            },
+            {
+                "id": 18,
+                "name": "week_start_day",
+                "value": "mon"
+            },
+            {
+                "id": 19,
+                "name": "leftover_class_expiration_period",
+                "value": "12"
+            },
+            {
+                "id": 20,
+                "name": "student_reminder_email_time",
+                "value": "08:00"
+            },
+            {
+                "id": 21,
+                "name": "student_reminder_email_lesson_types",
+                "value": "class"
+            },
+            {
+                "id": 22,
+                "name": "school_timezone",
+                "value": "Asia\/Tokyo"
+            },
+            {
+                "id": 23,
+                "name": "email_header_footer_color",
+                "value": "#99DFFF"
+            },
+            {
+                "id": 24,
+                "name": "email_header_image",
+                "value": "email_header_image.png"
+            },
+            {
+                "id": 25,
+                "name": "email_header_text_size",
+                "value": "20"
+            },
+            {
+                "id": 26,
+                "name": "email_body_text_size",
+                "value": "16"
+            },
+            {
+                "id": 27,
+                "name": "email_header_text_en",
+                "value": "uTeach Cloud School Management"
+            },
+            {
+                "id": 28,
+                "name": "email_header_text_ja",
+                "value": "uTeach Cloud \u30b9\u30af\u30fc\u30eb\u7ba1\u7406"
+            },
+            {
+                "id": 29,
+                "name": "email_footer_text_en",
+                "value": "\u00a92020 uTeach Cloud. All rights reserved."
+            },
+            {
+                "id": 30,
+                "name": "email_footer_text_ja",
+                "value": "\u00a92020\u5e74 uTeach Cloud"
+            },
+            {
+                "id": 31,
+                "name": "show_other_teachers_classes",
+                "value": "1"
+            },
+            {
+                "id": 32,
+                "name": "new_student_tag_attachment_duration_days",
+                "value": "90"
+            },
+            {
+                "id": 33,
+                "name": "smtp_settings",
+                "value": "{\"host\":\"in-v3.mailjet.com\",\"port\":\"587\",\"username\":\"3acb19d2fd6111f100a23fcf11f673a8\",\"password\":\"029de45dedd8c8b16cd5b7db0ce65cff\",\"from_address\":\"support@uteach.jp\",\"from_name\":\"uTeach Cloud\"}"
+            },
+            {
+                "id": 34,
+                "name": "stripe_publishable_key",
+                "value": null
+            },
+            {
+                "id": 35,
+                "name": "stripe_secret_key",
+                "value": null
+            },
+            {
+                "id": 36,
+                "name": "stripe_webhook_signing_secret_key",
+                "value": null
+            },
+            {
+                "id": 37,
+                "name": "payment_methods",
+                "value": "Stripe,Cash,Bank Transfer"
+            },
+            {
+                "id": 38,
+                "name": "generate_payment_info_for_roles",
+                "value": "1,7"
+            },
+            {
+                "id": 39,
+                "name": "use_stripe",
+                "value": "0"
+            },
+            {
+                "id": 40,
+                "name": "use_zoom",
+                "value": "0"
+            },
+            {
+                "id": 41,
+                "name": "zoom_api_key",
+                "value": ""
+            },
+            {
+                "id": 42,
+                "name": "zoom_secret_key",
+                "value": ""
+            },
+            {
+                "id": 43,
+                "name": "zoom_email_notification_to",
+                "value": ""
+            },
+            {
+                "id": 44,
+                "name": "zoom_email_notification_before",
+                "value": null
+            },
+            {
+                "id": 45,
+                "name": "zoom_webhook_verification_token",
+                "value": null
+            },
+            {
+                "id": 46,
+                "name": "line_channel_id",
+                "value": null
+            },
+            {
+                "id": 47,
+                "name": "line_channel_secret",
+                "value": null
+            },
+            {
+                "id": 48,
+                "name": "line_assertion_private_key",
+                "value": null
+            },
+            {
+                "id": 49,
+                "name": "line_add_friend_button_html",
+                "value": null
+            },
+            {
+                "id": 50,
+                "name": "line_account_link_meesage_text",
+                "value": "Want to link your line account with your uTeach account?"
+            },
+            {
+                "id": 51,
+                "name": "line_account_link_meesage_button_text",
+                "value": "Link My Account"
+            },
+            {
+                "id": 52,
+                "name": "line_account_linked_message_text_en",
+                "value": "Your line account is now linked with your uTeach account!"
+            },
+            {
+                "id": 53,
+                "name": "line_account_linked_message_text_ja",
+                "value": "\u3053\u308c\u3067\u3001\u30e9\u30a4\u30f3\u30a2\u30ab\u30a6\u30f3\u30c8\u304cuTeach\u30a2\u30d7\u30ea\u30a2\u30ab\u30a6\u30f3\u30c8\u306b\u30ea\u30f3\u30af\u3055\u308c\u307e\u3057\u305f\u3002"
+            },
+            {
+                "id": 54,
+                "name": "school_initial",
+                "value": "SD"
+            },
+            {
+                "id": 55,
+                "name": "line_login_channel_id",
+                "value": null
+            },
+            {
+                "id": 56,
+                "name": "line_login_channel_secret",
+                "value": null
+            },
+            {
+                "id": 57,
+                "name": "use_line_messaging_api",
+                "value": "0"
+            },
+            {
+                "id": 58,
+                "name": "use_login_with_line",
+                "value": "0"
+            },
+            {
+                "id": 59,
+                "name": "lesson_video",
+                "value": "1"
+            },
+            {
+                "id": 60,
+                "name": "student_lesson_prep",
+                "value": "1"
+            },
+            {
+                "id": 61,
+                "name": "vocab_list",
+                "value": "1"
+            },
+            {
+                "id": 62,
+                "name": "extra_materials_text",
+                "value": "1"
+            },
+            {
+                "id": 63,
+                "name": "lesson_teachers_notes",
+                "value": "1"
+            },
+            {
+                "id": 64,
+                "name": "lesson_teachers_prep",
+                "value": "1"
+            },
+            {
+                "id": 65,
+                "name": "exercises",
+                "value": "1"
+            },
+            {
+                "id": 66,
+                "name": "homework",
+                "value": "1"
+            },
+            {
+                "id": 67,
+                "name": "downloadable_files",
+                "value": "1"
+            },
+            {
+                "id": 68,
+                "name": "pdf_files",
+                "value": "1"
+            },
+            {
+                "id": 69,
+                "name": "audio_files",
+                "value": "1"
+            },
+            {
+                "id": 70,
+                "name": "lesson_description",
+                "value": "1"
+            },
+            {
+                "id": 71,
+                "name": "lesson_objectives",
+                "value": "1"
+            },
+            {
+                "id": 72,
+                "name": "lesson_fulltext",
+                "value": "1"
+            },
+            {
+                "id": 73,
+                "name": "lesson_thumbnail",
+                "value": "1"
+            },
+            {
+                "id": 74,
+                "name": "class_reminder",
+                "value": "on"
+            },
+            {
+                "id": 75,
+                "name": "event_reminder",
+                "value": null
+            },
+            {
+                "id": 76,
+                "name": "lesson_description_required",
+                "value": "0"
+            },
+            {
+                "id": 77,
+                "name": "lesson_objectives_required",
+                "value": "0"
+            },
+            {
+                "id": 78,
+                "name": "lesson_fulltext_required",
+                "value": "0"
+            },
+            {
+                "id": 79,
+                "name": "lesson_thumbnail_required",
+                "value": "0"
+            },
+            {
+                "id": 80,
+                "name": "lesson_video_required",
+                "value": "0"
+            },
+            {
+                "id": 81,
+                "name": "student_lesson_prep_required",
+                "value": "0"
+            },
+            {
+                "id": 82,
+                "name": "vocab_list_required",
+                "value": "0"
+            },
+            {
+                "id": 83,
+                "name": "extra_materials_text_required",
+                "value": "0"
+            },
+            {
+                "id": 84,
+                "name": "lesson_teachers_notes_required",
+                "value": "0"
+            },
+            {
+                "id": 85,
+                "name": "lesson_teachers_prep_required",
+                "value": "0"
+            },
+            {
+                "id": 86,
+                "name": "exercises_required",
+                "value": "0"
+            },
+            {
+                "id": 87,
+                "name": "homework_required",
+                "value": "0"
+            },
+            {
+                "id": 88,
+                "name": "downloadable_files_required",
+                "value": "0"
+            },
+            {
+                "id": 89,
+                "name": "pdf_files_required",
+                "value": "0"
+            },
+            {
+                "id": 90,
+                "name": "audio_files_required",
+                "value": "0"
+            },
+            {
+                "id": 91,
+                "name": "terminal_checkin",
+                "value": "on"
+            },
+            {
+                "id": 92,
+                "name": "terminal_checkout",
+                "value": "on"
+            },
+            {
+                "id": 93,
+                "name": "terminal_reservation",
+                "value": null
+            },
+            {
+                "id": 94,
+                "name": "terminal_checkout_book",
+                "value": "on"
+            },
+            {
+                "id": 95,
+                "name": "ip_security_role",
+                "value": ""
+            },
+            {
+                "id": 96,
+                "name": "whitelist_ips",
+                "value": ""
+            },
+            {
+                "id": 97,
+                "name": "stripe_currency",
+                "value": "jpy"
+            }
+        ]
+    },
+    "students": {
+        "eloquent": "\\App\\Students",
+        "records": [
+            {
+                "id": 1,
+                "user_id": 4,
+                "parent_user_id": null,
+                "firstname": "Tarou",
+                "lastname": "Yamada",
+                "firstname_kanji": "Tarou",
+                "lastname_kanji": "Yamada",
+                "firstname_furigana": "Tarou",
+                "lastname_furigana": "Yamada",
+                "status": 1,
+                "join_date": null,
+                "home_phone": null,
+                "mobile_phone": null,
+                "email": "yamada@tarou.com",
+                "address": null,
+                "addr_latitude": null,
+                "addr_longitude": null,
+                "toiawase_referral": "",
+                "toiawase_memo": "",
+                "toiawase_getter": "",
+                "toiawase_houhou": "",
+                "toiawase_date": "2020-06-27",
+                "teacher_id": null,
+                "birthday": null,
+                "comment": null,
+                "image": null,
+                "levels": "",
+                "rfid_token": null,
+                "office_name": null,
+                "office_address": null,
+                "office_phone": null,
+                "school_name": null,
+                "school_address": null,
+                "school_phone": null,
+                "guardian1_name": null,
+                "guardian1_address": null,
+                "guardian1_phone": null,
+                "guardian2_name": null,
+                "guardian2_address": null,
+                "guardian2_phone": null,
+                "is_force_verified": 0
+            },
+            {
+                "id": 2,
+                "user_id": 5,
+                "parent_user_id": null,
+                "firstname": "Jiro",
+                "lastname": "Tanaka",
+                "firstname_kanji": "Jiro",
+                "lastname_kanji": "Tanaka",
+                "firstname_furigana": "Jiro",
+                "lastname_furigana": "Tanaka",
+                "status": 1,
+                "join_date": null,
+                "home_phone": null,
+                "mobile_phone": null,
+                "email": "benjaminftjones@gmail.com",
+                "address": null,
+                "addr_latitude": null,
+                "addr_longitude": null,
+                "toiawase_referral": "",
+                "toiawase_memo": "",
+                "toiawase_getter": "",
+                "toiawase_houhou": "",
+                "toiawase_date": "2020-06-27",
+                "teacher_id": null,
+                "birthday": null,
+                "comment": null,
+                "image": null,
+                "levels": "",
+                "rfid_token": "1",
+                "office_name": null,
+                "office_address": null,
+                "office_phone": null,
+                "school_name": null,
+                "school_address": null,
+                "school_phone": null,
+                "guardian1_name": null,
+                "guardian1_address": null,
+                "guardian1_phone": null,
+                "guardian2_name": null,
+                "guardian2_address": null,
+                "guardian2_phone": null,
+                "is_force_verified": 0
+            },
+            {
+                "id": 3,
+                "user_id": 6,
+                "parent_user_id": null,
+                "firstname": "Saburo",
+                "lastname": "Watanabe",
+                "firstname_kanji": "Saburo",
+                "lastname_kanji": "Watanabe",
+                "firstname_furigana": "Saburo",
+                "lastname_furigana": "Watanabe",
+                "status": 1,
+                "join_date": null,
+                "home_phone": null,
+                "mobile_phone": null,
+                "email": "saburo@watanabe.com",
+                "address": null,
+                "addr_latitude": null,
+                "addr_longitude": null,
+                "toiawase_referral": "",
+                "toiawase_memo": "",
+                "toiawase_getter": "",
+                "toiawase_houhou": "",
+                "toiawase_date": "2020-06-27",
+                "teacher_id": null,
+                "birthday": null,
+                "comment": null,
+                "image": null,
+                "levels": "",
+                "rfid_token": null,
+                "office_name": null,
+                "office_address": null,
+                "office_phone": null,
+                "school_name": null,
+                "school_address": null,
+                "school_phone": null,
+                "guardian1_name": null,
+                "guardian1_address": null,
+                "guardian1_phone": null,
+                "guardian2_name": null,
+                "guardian2_address": null,
+                "guardian2_phone": null,
+                "is_force_verified": 0
+            },
+            {
+                "id": 4,
+                "user_id": 7,
+                "parent_user_id": null,
+                "firstname": "Shiro",
+                "lastname": "Amakusa",
+                "firstname_kanji": "Shiro",
+                "lastname_kanji": "Amakusa",
+                "firstname_furigana": "Shiro",
+                "lastname_furigana": "Amakusa",
+                "status": 1,
+                "join_date": null,
+                "home_phone": null,
+                "mobile_phone": null,
+                "email": "shiro@amakusa.com",
+                "address": null,
+                "addr_latitude": null,
+                "addr_longitude": null,
+                "toiawase_referral": "",
+                "toiawase_memo": "",
+                "toiawase_getter": "",
+                "toiawase_houhou": "",
+                "toiawase_date": "2020-06-27",
+                "teacher_id": null,
+                "birthday": null,
+                "comment": null,
+                "image": null,
+                "levels": "",
+                "rfid_token": null,
+                "office_name": null,
+                "office_address": null,
+                "office_phone": null,
+                "school_name": null,
+                "school_address": null,
+                "school_phone": null,
+                "guardian1_name": null,
+                "guardian1_address": null,
+                "guardian1_phone": null,
+                "guardian2_name": null,
+                "guardian2_address": null,
+                "guardian2_phone": null,
+                "is_force_verified": 0
+            },
+            {
+                "id": 5,
+                "user_id": 8,
+                "parent_user_id": null,
+                "firstname": "Kojin",
+                "lastname": "Suzuki",
+                "firstname_kanji": "Kojin",
+                "lastname_kanji": "Suzuki",
+                "firstname_furigana": "Kojin",
+                "lastname_furigana": "Suzuki",
+                "status": 1,
+                "join_date": null,
+                "home_phone": null,
+                "mobile_phone": null,
+                "email": "kojin@suzuki.com",
+                "address": null,
+                "addr_latitude": null,
+                "addr_longitude": null,
+                "toiawase_referral": "",
+                "toiawase_memo": "",
+                "toiawase_getter": "",
+                "toiawase_houhou": "",
+                "toiawase_date": "2020-06-27",
+                "teacher_id": null,
+                "birthday": null,
+                "comment": null,
+                "image": null,
+                "levels": "",
+                "rfid_token": null,
+                "office_name": null,
+                "office_address": null,
+                "office_phone": null,
+                "school_name": null,
+                "school_address": null,
+                "school_phone": null,
+                "guardian1_name": null,
+                "guardian1_address": null,
+                "guardian1_phone": null,
+                "guardian2_name": null,
+                "guardian2_address": null,
+                "guardian2_phone": null,
+                "is_force_verified": 0
+            }
+        ]
+    },
+    "tags": {
+        "eloquent": "\\App\\Tag",
+        "records": [
+            {
+                "id": 1,
+                "name": "Upcomming Birthday",
+                "color": "#ED960F",
+                "icon": "fa-birthday-cake",
+                "is_automated": 1
+            },
+            {
+                "id": 2,
+                "name": "New Student",
+                "color": "#2A6F08",
+                "icon": "fa-star",
+                "is_automated": 1
+            },
+            {
+                "id": 3,
+                "name": "Due Todo",
+                "color": "#670873",
+                "icon": "fa-list",
+                "is_automated": 1
+            },
+            {
+                "id": 4,
+                "name": "Long Time Student - 1+ Year",
+                "color": "#FFDC00",
+                "icon": "fa-star-o",
+                "is_automated": 1
+            },
+            {
+                "id": 5,
+                "name": "Long Time Student - 2+ Year",
+                "color": "#FFDC00",
+                "icon": "fa-star-o",
+                "is_automated": 1
+            },
+            {
+                "id": 6,
+                "name": "Long Time Student - 3+ Year",
+                "color": "#FFDC00",
+                "icon": "fa-star-o",
+                "is_automated": 1
+            },
+            {
+                "id": 7,
+                "name": "Long Time Student - 4+ Year",
+                "color": "#FFDC00",
+                "icon": "fa-star-o",
+                "is_automated": 1
+            },
+            {
+                "id": 8,
+                "name": "Long Time Student - 5+ Year",
+                "color": "#FFDC00",
+                "icon": "fa-star-o",
+                "is_automated": 1
+            },
+            {
+                "id": 9,
+                "name": "Oustanding Payment",
+                "color": "#FF0000",
+                "icon": "fa-usd",
+                "is_automated": 1
+            },
+            {
+                "id": 10,
+                "name": "RFID Registered",
+                "color": "#076351",
+                "icon": "fa-address-card-o",
+                "is_automated": 1
+            },
+            {
+                "id": 11,
+                "name": "LINE Connected",
+                "color": "#5bba25",
+                "icon": "fa-info-circle",
+                "is_automated": 1
+            }
+        ]
+    },
+    "teachers": {
+        "eloquent": "\\App\\Teachers",
+        "records": [
+            {
+                "id": 1,
+                "name": "\u9234\u6728\u9234\u5b50",
+                "nickname": "suzuki-sensei",
+                "furigana": "\u30b9\u30ba\u30ad\u30b9\u30ba\u30b3",
+                "profile": "Great teacher from Kumamoto, Japan.",
+                "birthday": "2000-01-01",
+                "birthplace": "Kumamoto, Japan",
+                "status": 0,
+                "user_id": 9,
+                "color_coding": "blue",
+                "username": "suzukisuzuko"
+            }
+        ]
+    },
+    "units": {
+        "eloquent": "\\App\\Units",
+        "records": [
+            {
+                "id": 1,
+                "name": "Getting Started",
+                "objectives": "Understand what a course is",
+                "course_id": 1,
+                "position": null
+            },
+            {
+                "id": 2,
+                "name": "Do It Yourself",
+                "objectives": "Why don't you try making a course?",
+                "course_id": 1,
+                "position": null
+            }
+        ]
+    },
+    "users": {
+        "eloquent": "\\App\\User",
+        "records": [
+            {
+                "id": 1,
+                "name": "Super Admin",
+                "email": "support@uteach.jp",
+                "username": "admin",
+                "email_verified_at": "2020-06-27 04:52:53",
+                "password": "$2y$10$99WFkxs71atHHSJDvVyY0uEBSdNv8yD8zzT9fgJZcgyMpIyuZ6dgC",
+                "remember_token": null,
+                "lang": "en",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": "agendaWeek",
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 2,
+                "name": "Admin",
+                "email": "support@uteach.jp",
+                "username": "adminjr",
+                "email_verified_at": null,
+                "password": "$2y$10$3p14HxsTVhS4KKj.zA6ZFOMO44lpyl2p41oxmQumKnJZJKgXvwv7K",
+                "remember_token": null,
+                "lang": "en",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 3,
+                "name": "Librarian",
+                "email": "librarian@uteach.jp",
+                "username": "librarian",
+                "email_verified_at": null,
+                "password": "$2y$10$v9oXv.k1gOq84kiZX9R7rucHo5wDZzb3jAnXIeABObE7vfG.zPhv2",
+                "remember_token": null,
+                "lang": "en",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 4,
+                "name": "Tarou Yamada",
+                "email": "yamada@tarou.com",
+                "username": "Tarou95",
+                "email_verified_at": null,
+                "password": "$2y$10$G4jjASd3oMtmjtw0YS1FrObRbaF6KhdXYhRoSZ4X6rwqJ9omypDR2",
+                "remember_token": null,
+                "lang": "en",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 5,
+                "name": "Jiro Tanaka",
+                "email": "benjaminftjones@gmail.com",
+                "username": "Jiro11",
+                "email_verified_at": null,
+                "password": "$2y$10$N8j5KHZWOmlERF9HXdUi1uMUYZByzXs469YRqmaTyn9B73fUabDlK",
+                "remember_token": null,
+                "lang": "ja",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 6,
+                "name": "Saburo Watanabe",
+                "email": "saburo@watanabe.com",
+                "username": "Saburo81",
+                "email_verified_at": null,
+                "password": "$2y$10$eNIrCqZTjymfVPNOrZEE9.AhwPdAnO9A5ZmKMY6su84Sjs8UU1UCO",
+                "remember_token": null,
+                "lang": "ja",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 7,
+                "name": "Shiro Amakusa",
+                "email": "shiro@amakusa.com",
+                "username": "Shiro52",
+                "email_verified_at": null,
+                "password": "$2y$10$Rboh\/lZnBXH0.r7jXzfLIuf3oNmYvDREcuU9H5GyZZTzxJttKe.vi",
+                "remember_token": null,
+                "lang": "ja",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 8,
+                "name": "Kojin Suzuki",
+                "email": "kojin@suzuki.com",
+                "username": "Kojin86",
+                "email_verified_at": null,
+                "password": "$2y$10$0UHDFROJfDkdmKd5h3bfTuJBuCODzmZ9s9vKJzqfXNdWI0wBnJujy",
+                "remember_token": null,
+                "lang": "en",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": null,
+                "line_user_id": null
+            },
+            {
+                "id": 9,
+                "name": "\u9234\u6728\u9234\u5b50",
+                "email": "suzuko@suzuki.com",
+                "username": "suzukisuzuko",
+                "email_verified_at": null,
+                "password": "$2y$10$bUfsqD4F\/aA3Yr0mOuTw7unuJmi30\/U5hR6.45I5E74pR5flUsujm",
+                "remember_token": null,
+                "lang": "en",
+                "receive_emails": 1,
+                "receive_line_messsges": 0,
+                "calendar_view": null,
+                "stripe_customer_id": null,
+                "zoom_email": "suzuko@suzuki.com",
+                "line_user_id": null
+            }
+        ]
+    }
+}

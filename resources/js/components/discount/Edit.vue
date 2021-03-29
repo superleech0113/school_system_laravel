@@ -1,0 +1,172 @@
+<template>
+    <b-modal ref="my-modal" :title="modal_title" @hidden="$emit('modalClose')" no-fade>
+        <div slot="modal-footer">
+            <b-button variant="primary" @click="$refs['dummy_submit'].click()" :disabled="isLoading">{{ trans('messages.save') }}
+                <b-spinner v-if="isLoading" small label="Spinning"></b-spinner>
+            </b-button>
+            <b-button variant="secondary" @click="hideModal">{{  trans('messages.cancel') }}</b-button>
+        </div>
+        <form ref="my-form" @submit.prevent="saveRecord">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>{{ trans('messages.name') }}:</label>
+                        <input
+                            type="text"
+                            class="form-control col-sm-12"
+                            :class="{ 'is-invalid' :  errors.name }"
+                            v-model="name" required>
+                        <div v-if="errors.name" class="invalid-feedback">
+                            <template v-for="error_message in errors.name" >{{ error_message }}</template>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12" v-if="displayFields.amount">
+                    <div class="form-group">
+                        <label>{{ __('messages.discount-amount') }}:</label>
+                        <input
+                            type="number"
+                            class="form-control col-sm-12"
+                            :class="{ 'is-invalid' :  errors.amount }"
+                            v-model="amount"
+                            required
+                            :disabled="record.in_use"
+                            >
+                        <div v-if="errors.amount" class="invalid-feedback">
+                            <template v-for="error_message in errors.amount" >{{ error_message }}</template>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12" v-if="displayFields.duration">
+                   <div class="form-group">
+                        <b-form-group :label="__('messages.duration') + ': '">
+                            <b-form-radio-group
+                                v-model="duration"
+                                :options="[
+                                    { text: __('messages.forever'), 'value': duration_enum.forever },
+                                    { text: __('messages.once'), 'value': duration_enum.once }
+                                ]"
+                                buttons
+                                button-variant="outline-primary"
+                                :disabled="record.in_use"
+                            ></b-form-radio-group>
+                        </b-form-group>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <b-form-group :label="__('messages.status') + ':'">
+                            <b-form-radio-group
+                                v-model="is_active"
+                                :options="[
+                                    { text: __('messages.active'), 'value': 1 },
+                                    { text: __('messages.archive'), 'value': 0 }
+                                ]"
+                                buttons
+                                button-variant="outline-primary"
+                            ></b-form-radio-group>
+                        </b-form-group>
+                    </div>
+                </div>
+                <div class="col-sm-12" v-if="displayFields.send_to_stripe">
+                    <b-form-checkbox 
+                        v-model="send_to_stripe"
+                        switch
+                        >
+                        <span
+                            v-b-tooltip.top.hover 
+                            :title="__('messages.to-use-this-discount-with-stripe-invoice-and-stripe-subscription-functionality-it-is-required-to-send-discount-details-to-stripe')"
+                            >{{ __('messages.send-to-stripe') }}</span>
+                    </b-form-checkbox>
+                </div>
+            </div>
+            <button ref="dummy_submit" style="display:none;"></button>
+        </form>
+    </b-modal>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+    props: ['record', 'duration_enum', 'use_stripe_subscription'],
+    data : function(){
+        return {
+            id: this.record.id,
+            name: this.record.name,
+            amount: this.record.amount,
+            duration: this.record.duration,
+            is_active: this.record.is_active,
+            in_use_with_stripe: this.record.in_use_with_stripe,
+            send_to_stripe: this.record.send_to_stripe,
+            isLoading: false,
+            errors: []
+        };
+    },
+    computed: {
+        modal_title: function(){
+            let title = this.id ? trans('messages.edit') : trans('messages.add');
+            title += " " + __('messages.discount');
+            return title;
+        },
+        displayFields() {
+            return {
+                amount: this.id ? false : true,
+                duration: this.id ? false : true,
+                send_to_stripe: this.use_stripe_subscription && !this.in_use_with_stripe ? true : false,
+            }
+        }
+    },
+    methods: {
+        showModal() {
+            this.$refs['my-modal'].show()
+        },
+        hideModal() {
+            this.$refs['my-modal'].hide()
+        },
+        saveRecord: function(){
+            let vm = this;
+            this.isLoading = true;
+            let data = {
+                id: this.id,
+                name: this.name,
+                amount: this.amount,
+                duration: this.duration,                
+                is_active: this.is_active ? 1 : 0,
+                send_to_stripe: this.send_to_stripe ? 1 : 0,
+            };
+            axios.post(route('discounts.save').url(), data)
+            .then(res => {
+                let data = res.data;
+                if (data.status == 1)
+                {
+                    if(this.id)
+                    {
+                        vm.$emit('recordUpdated', data.message, data.discount);
+                    }
+                    else
+                    {
+                        vm.$emit('recordCreated', data.message, data.discount);
+                    }
+                }
+                
+                vm.hideModal();
+            }).catch(error => {
+                vm.isLoading = false;
+                if(error.response.status == 422)
+                {
+                    vm.errors = error.response.data.errors;
+                }
+                else
+                {
+                    this.showError(error.response.data.message || trans('messages.something-went-wrong'));
+                    throw error;
+                }
+            });
+        }
+    },
+    mounted(){
+        this.showModal();
+    }
+}
+</script>
